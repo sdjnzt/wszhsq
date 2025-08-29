@@ -17,8 +17,7 @@ import {
   Row,
   Col,
   Statistic,
-  Progress,
-  Divider
+
 } from 'antd';
 import { 
   HomeOutlined, 
@@ -28,7 +27,7 @@ import {
   PlusOutlined,
   EditOutlined,
   EyeOutlined,
-  DeleteOutlined,
+
   ExportOutlined,
   ImportOutlined,
   ApiOutlined,
@@ -36,8 +35,7 @@ import {
   ToolOutlined
 } from '@ant-design/icons';
 import './Property.less';
-import { desensitizePhoneNumber, desensitizeIdCard } from '../utils/desensitization';
-import dayjs from 'dayjs';
+import { desensitizePhoneNumber } from '../utils/desensitization';
 
 const { TabPane } = Tabs;
 const { Option } = Select;
@@ -102,7 +100,7 @@ const Property: React.FC = () => {
   const [activeTab, setActiveTab] = useState('1');
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [modalType, setModalType] = useState<'add' | 'edit' | 'view'>('add');
-  const [currentRecord, setCurrentRecord] = useState<PropertyCompany | null>(null);
+
   const [form] = Form.useForm();
 
   // 物业公司数据
@@ -537,8 +535,8 @@ const Property: React.FC = () => {
       title: '操作',
       key: 'action',
       width: 280,
-      fixed: 'right',
-      render: (_: any, record: PropertyCompany) => (
+      fixed: 'right' as const,
+      render: (_: unknown, record: PropertyCompany) => (
         <Space>
           <Button type="link" size="small" icon={<EyeOutlined />} onClick={() => handleView(record)}>
             详情
@@ -617,7 +615,7 @@ const Property: React.FC = () => {
       title: '操作',
       key: 'action',
       width: 150,
-      render: (_: any, record: GridInfo) => (
+      render: () => (
         <Space>
           <Button type="link" size="small" icon={<EyeOutlined />}>
             详情
@@ -700,7 +698,7 @@ const Property: React.FC = () => {
       title: '操作',
       key: 'action',
       width: 150,
-      render: (_: any, record: ContractInfo) => (
+      render: () => (
         <Space>
           <Button type="link" size="small" icon={<EyeOutlined />}>
             详情
@@ -715,7 +713,6 @@ const Property: React.FC = () => {
 
   // 处理查看详情
   const handleView = (record: PropertyCompany) => {
-    setCurrentRecord(record);
     setModalType('view');
     setIsModalVisible(true);
     form.setFieldsValue(record);
@@ -723,7 +720,6 @@ const Property: React.FC = () => {
 
   // 处理编辑
   const handleEdit = (record: PropertyCompany) => {
-    setCurrentRecord(record);
     setModalType('edit');
     setIsModalVisible(true);
     form.setFieldsValue(record);
@@ -731,7 +727,6 @@ const Property: React.FC = () => {
 
   // 处理添加
   const handleAdd = () => {
-    setCurrentRecord(null);
     setModalType('add');
     setIsModalVisible(true);
     form.resetFields();
@@ -755,7 +750,7 @@ const Property: React.FC = () => {
   // 处理表单提交
   const handleSubmit = async () => {
     try {
-      const values = await form.validateFields();
+      await form.validateFields();
       if (modalType === 'add') {
         message.success('物业公司添加成功！');
       } else if (modalType === 'edit') {

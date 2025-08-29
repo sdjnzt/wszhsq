@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card, Table, Tabs, Button, Input, Select, Row, Col, Statistic, Tag, Tooltip, Space, Modal, Form, message, Popconfirm } from 'antd';
 import { SearchOutlined, DownloadOutlined, PlusOutlined, HomeOutlined, BuildOutlined, ApartmentOutlined, TeamOutlined, EyeOutlined, EditOutlined, DeleteOutlined, UploadOutlined } from '@ant-design/icons';
 import './Housing.less';
-import { desensitizeIdCard, desensitizePhoneNumber } from '../utils/desensitization';
+import { desensitizeIdCard } from '../utils/desensitization';
 
 const { TabPane } = Tabs;
 const { Option } = Select;
@@ -409,7 +409,7 @@ const Housing: React.FC = () => {
   // 保存房屋信息
   const handleSaveHouse = async () => {
     try {
-      const values = await houseForm.validateFields();
+      await houseForm.validateFields();
       if (currentHouse) {
         message.success('房屋信息更新成功');
       } else {
@@ -438,7 +438,7 @@ const Housing: React.FC = () => {
   // 保存楼房信息
   const handleSaveBuilding = async () => {
     try {
-      const values = await buildingForm.validateFields();
+      await buildingForm.validateFields();
       if (currentBuilding) {
         message.success('楼房信息更新成功');
       } else {
@@ -467,7 +467,7 @@ const Housing: React.FC = () => {
   // 保存社区信息
   const handleSaveCommunity = async () => {
     try {
-      const values = await communityForm.validateFields();
+      await communityForm.validateFields();
       if (currentCommunity) {
         message.success('社区信息更新成功');
       } else {

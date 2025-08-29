@@ -137,7 +137,7 @@ const Inspection: React.FC = () => {
         { text: '处理中', value: '处理中' },
         { text: '待处理', value: '待处理' },
       ],
-      onFilter: (value: string, record: InspectionItem) => record.status === value,
+      onFilter: (value: boolean | React.Key, record: InspectionItem) => record.status === value,
     },
     {
       title: '操作',

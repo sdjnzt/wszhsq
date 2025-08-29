@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Card, Table, Tabs, Button, Input, Select, Row, Col, Statistic, Tag, Progress, Space, Avatar, Modal, Form, message, Popconfirm, Tooltip, Badge } from 'antd';
-import { SearchOutlined, DownloadOutlined, PlusOutlined, SafetyCertificateOutlined, AppstoreOutlined, TeamOutlined, UserOutlined, AlertOutlined, EyeOutlined, EditOutlined, DeleteOutlined, ExclamationCircleOutlined, CheckCircleOutlined, ClockCircleOutlined } from '@ant-design/icons';
+import { Card, Table, Tabs, Button, Input, Select, Row, Col, Statistic, Tag, Progress, Space, Avatar, Modal, Form, message, Popconfirm, Tooltip } from 'antd';
+import { SearchOutlined, DownloadOutlined, PlusOutlined, SafetyCertificateOutlined, AppstoreOutlined, TeamOutlined, AlertOutlined, EyeOutlined, EditOutlined, DeleteOutlined, ExclamationCircleOutlined, CheckCircleOutlined, ClockCircleOutlined } from '@ant-design/icons';
 import SimpleMap from '../components/SimpleMap';
 import './GridManagement.less';
 import { desensitizePhoneNumber } from '../utils/desensitization';
@@ -296,7 +296,7 @@ const GridManagement: React.FC = () => {
   // 保存网格
   const handleSaveGrid = async () => {
     try {
-      const values = await gridForm.validateFields();
+      await gridForm.validateFields();
       if (currentGrid) {
         // 编辑模式
         message.success('网格信息更新成功');
@@ -327,7 +327,7 @@ const GridManagement: React.FC = () => {
   // 保存网格员
   const handleSaveMember = async () => {
     try {
-      const values = await memberForm.validateFields();
+      await memberForm.validateFields();
       if (currentMember) {
         message.success('网格员信息更新成功');
       } else {
@@ -356,7 +356,7 @@ const GridManagement: React.FC = () => {
   // 保存事件
   const handleSaveEvent = async () => {
     try {
-      const values = await eventForm.validateFields();
+      await eventForm.validateFields();
       if (currentEvent) {
         message.success('事件信息更新成功');
       } else {

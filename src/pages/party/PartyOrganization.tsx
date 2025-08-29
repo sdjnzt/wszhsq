@@ -217,8 +217,9 @@ const PartyOrganizationPage: React.FC = () => {
         data[i] = { ...data[i], ...values };
         return;
       }
-      if (data[i].children && data[i].children.length > 0) {
-        updateTreeData(data[i].children, id, values);
+      const children = data[i].children;
+      if (children && children.length > 0) {
+        updateTreeData(children, id, values);
       }
     }
   };
@@ -230,11 +231,12 @@ const PartyOrganizationPage: React.FC = () => {
         if (!data[i].children) {
           data[i].children = [];
         }
-        data[i].children.push(newNode);
+        data[i].children!.push(newNode);
         return;
       }
-      if (data[i].children && data[i].children.length > 0) {
-        addToTreeData(data[i].children, parentId, newNode);
+      const children = data[i].children;
+      if (children && children.length > 0) {
+        addToTreeData(children, parentId, newNode);
       }
     }
   };
@@ -274,9 +276,10 @@ const PartyOrganizationPage: React.FC = () => {
         data.splice(i, 1);
         return true;
       }
-      if (data[i].children && data[i].children.length > 0) {
-        const removed = removeFromTreeData(data[i].children, id);
-        if (removed && data[i].children.length === 0) {
+      const children = data[i].children;
+      if (children && children.length > 0) {
+        const removed = removeFromTreeData(children, id);
+        if (removed && children.length === 0) {
           data[i].children = [];
         }
         if (removed) return true;

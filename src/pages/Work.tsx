@@ -82,7 +82,7 @@ const Work: React.FC = () => {
         { text: '安全排查', value: '安全排查' },
         { text: '志愿服务', value: '志愿服务' },
       ],
-      onFilter: (value, record) => record.type === value,
+      onFilter: (value: boolean | React.Key, record: any) => record.type === value,
     },
     {
       title: '负责人',
@@ -93,32 +93,32 @@ const Work: React.FC = () => {
       title: '开始日期',
       dataIndex: 'startDate',
       key: 'startDate',
-      sorter: (a, b) => new Date(a.startDate) - new Date(b.startDate),
+      sorter: (a: any, b: any) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime(),
     },
     {
       title: '结束日期',
       dataIndex: 'endDate',
       key: 'endDate',
-      sorter: (a, b) => new Date(a.endDate) - new Date(b.endDate),
+      sorter: (a: any, b: any) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime(),
     },
     {
       title: '进度',
       dataIndex: 'progress',
       key: 'progress',
-      render: (progress) => (
+      render: (progress: any) => (
         <Progress 
           percent={progress} 
           size="small" 
           status={progress === 100 ? 'success' : 'active'}
         />
       ),
-      sorter: (a, b) => a.progress - b.progress,
+      sorter: (a: any, b: any) => a.progress - b.progress,
     },
     {
       title: '状态',
       dataIndex: 'status',
       key: 'status',
-      render: (status) => {
+      render: (status: any) => {
         let color = '';
         let icon = null;
         
@@ -150,7 +150,7 @@ const Work: React.FC = () => {
         { text: '进行中', value: '进行中' },
         { text: '待开始', value: '待开始' },
       ],
-      onFilter: (value, record) => record.status === value,
+      onFilter: (value: boolean | React.Key, record: any) => record.status === value,
     },
   ];
 

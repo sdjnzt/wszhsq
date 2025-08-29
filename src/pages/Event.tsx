@@ -21,8 +21,8 @@ const { TextArea } = Input;
 
 // 事件数据类型
 interface EventData {
-  key: string;
-  id: string;
+  key: number;
+  id: number;
   title: string;
   type: string;
   location: string;
@@ -60,11 +60,11 @@ const Event: React.FC = () => {
   // 模拟事件数据 - 基于大型社区实际规模
   const eventData: EventData[] = [
     // 安全隐患类事件
-    { id: '1', key: 1, title: '消防通道被电动车占用', type: '安全隐患', location: '中都花园A区3栋', reporter: '张伟', phone: '138****1234', date: '2024-06-15', status: '已处理', priority: '高', description: 'A区3栋消防通道被多辆电动车占用，存在严重安全隐患，影响消防车辆通行', handler: '张建国', handleTime: '2024-06-15 14:30', result: '已清理完毕，张贴禁止占用标识', gridId: 1 },
-    { id: '2', key: 2, title: '外墙脱落安全隐患', type: '安全隐患', location: '中都花园B区1栋', reporter: '李敏', phone: '139****5678', date: '2024-06-14', status: '处理中', priority: '紧急', description: 'B区1栋外墙出现脱落现象，存在严重安全隐患，需要立即处理', handler: '李明', handleTime: '2024-06-14 16:00', result: '已设置警戒线，联系施工单位处理', gridId: 2 },
-    { id: '3', key: 3, title: '井盖损坏安全隐患', type: '安全隐患', location: '中都花园C区道路', reporter: '王强', phone: '136****9012', date: '2024-06-13', status: '已处理', priority: '紧急', description: 'C区道路井盖损坏，存在安全隐患，影响车辆和行人安全', handler: '王华', handleTime: '2024-06-13 10:30', result: '已更换新井盖，安全隐患消除', gridId: 3 },
-    { id: '4', key: 4, title: '违规停车堵塞道路', type: '安全隐患', location: '中都花园A区主干道', reporter: '赵华', phone: '137****3456', date: '2024-06-12', status: '处理中', priority: '中', description: 'A区主干道被违规停车堵塞，影响车辆通行和紧急救援', handler: '张建国', handleTime: '2024-06-12 09:15', result: '已联系车主移车，加强巡逻管理', gridId: 1 },
-    { id: '5', key: 5, title: '电动车违规充电', type: '安全隐患', location: '中都花园D区楼道', reporter: '刘芳', phone: '135****7890', date: '2024-06-11', status: '已处理', priority: '高', description: 'D区楼道发现电动车违规充电现象，存在火灾隐患', handler: '赵红', handleTime: '2024-06-11 15:45', result: '已制止违规充电，安装充电桩引导规范充电', gridId: 4 },
+    { id: 1, key: 1, title: '消防通道被电动车占用', type: '安全隐患', location: '中都花园A区3栋', reporter: '张伟', phone: '138****1234', date: '2024-06-15', status: '已处理', priority: '高', description: 'A区3栋消防通道被多辆电动车占用，存在严重安全隐患，影响消防车辆通行', handler: '张建国', handleTime: '2024-06-15 14:30', result: '已清理完毕，张贴禁止占用标识', gridId: 1 },
+    { id: 2, key: 2, title: '外墙脱落安全隐患', type: '安全隐患', location: '中都花园B区1栋', reporter: '李敏', phone: '139****5678', date: '2024-06-14', status: '处理中', priority: '紧急', description: 'B区1栋外墙出现脱落现象，存在严重安全隐患，需要立即处理', handler: '李明', handleTime: '2024-06-14 16:00', result: '已设置警戒线，联系施工单位处理', gridId: 2 },
+    { id: 3, key: 3, title: '井盖损坏安全隐患', type: '安全隐患', location: '中都花园C区道路', reporter: '王强', phone: '136****9012', date: '2024-06-13', status: '已处理', priority: '紧急', description: 'C区道路井盖损坏，存在安全隐患，影响车辆和行人安全', handler: '王华', handleTime: '2024-06-13 10:30', result: '已更换新井盖，安全隐患消除', gridId: 3 },
+    { id: 4, key: 4, title: '违规停车堵塞道路', type: '安全隐患', location: '中都花园A区主干道', reporter: '赵华', phone: '137****3456', date: '2024-06-12', status: '处理中', priority: '中', description: 'A区主干道被违规停车堵塞，影响车辆通行和紧急救援', handler: '张建国', handleTime: '2024-06-12 09:15', result: '已联系车主移车，加强巡逻管理', gridId: 1 },
+    { id: 5, key: 5, title: '电动车违规充电', type: '安全隐患', location: '中都花园D区楼道', reporter: '刘芳', phone: '135****7890', date: '2024-06-11', status: '已处理', priority: '高', description: 'D区楼道发现电动车违规充电现象，存在火灾隐患', handler: '赵红', handleTime: '2024-06-11 15:45', result: '已制止违规充电，安装充电桩引导规范充电', gridId: 4 },
     
     // 环境卫生类事件
     { id: 6, key: 6, title: '垃圾箱周边垃圾散落', type: '环境卫生', location: '中都花园A区垃圾站', reporter: '陈阿姨', phone: '134****2345', date: '2024-06-15', status: '处理中', priority: '中', description: 'A区垃圾箱周边垃圾散落，影响环境卫生，需要及时清理', handler: '李秀英', handleTime: '2024-06-15 08:30', result: '已安排清洁人员清理，加强垃圾投放管理', gridId: 1 },
@@ -131,7 +131,7 @@ const Event: React.FC = () => {
         event.title.toLowerCase().includes(text) || 
         event.location.toLowerCase().includes(text) || 
         event.reporter.toLowerCase().includes(text) ||
-        event.id.toLowerCase().includes(text)
+        event.id.toString().includes(text)
       );
     }
     

@@ -78,19 +78,19 @@ const Governance: React.FC = () => {
       title: '人口数',
       dataIndex: 'population',
       key: 'population',
-      sorter: (a, b) => a.population - b.population,
+      sorter: (a: any, b: any) => a.population - b.population,
     },
     {
       title: '房屋数',
       dataIndex: 'houses',
       key: 'houses',
-      sorter: (a, b) => a.houses - b.houses,
+      sorter: (a: any, b: any) => a.houses - b.houses,
     },
     {
       title: '事件数',
       dataIndex: 'events',
       key: 'events',
-      sorter: (a, b) => a.events - b.events,
+      sorter: (a: any, b: any) => a.events - b.events,
     },
   ];
 
@@ -146,7 +146,7 @@ const Governance: React.FC = () => {
         { text: '交通安全', value: '交通安全' },
         { text: '电气安全', value: '电气安全' },
       ],
-      onFilter: (value, record) => record.type === value,
+      onFilter: (value: boolean | React.Key, record: any) => record.type === value,
     },
     {
       title: '隐患位置',
@@ -167,13 +167,13 @@ const Governance: React.FC = () => {
       title: '上报时间',
       dataIndex: 'date',
       key: 'date',
-      sorter: (a, b) => new Date(a.date) - new Date(b.date),
+      sorter: (a: any, b: any) => new Date(a.date).getTime() - new Date(b.date).getTime(),
     },
     {
       title: '处理状态',
       dataIndex: 'status',
       key: 'status',
-      render: (status) => {
+      render: (status: string) => {
         const color = status === '已解决' ? 'success' : 'processing';
         return <Tag color={color}>{status}</Tag>;
       },
@@ -181,7 +181,7 @@ const Governance: React.FC = () => {
         { text: '已解决', value: '已解决' },
         { text: '处理中', value: '处理中' },
       ],
-      onFilter: (value, record) => record.status === value,
+      onFilter: (value: boolean | React.Key, record: any) => record.status === value,
     },
   ];
 

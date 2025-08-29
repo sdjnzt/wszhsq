@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Card, Tabs, Table, Tag, Button, Input, Select, Row, Col, Statistic, Badge, Modal, Form, message, Popconfirm, Tooltip, Space, Avatar, Upload } from 'antd';
-import { SearchOutlined, DownloadOutlined, UserAddOutlined, UserOutlined, TeamOutlined, HomeOutlined, EyeOutlined, EditOutlined, DeleteOutlined, PlusOutlined, UploadOutlined } from '@ant-design/icons';
+import { Card, Tabs, Table, Tag, Button, Input, Select, Row, Col, Statistic, Modal, Form, message, Popconfirm, Tooltip, Space, Avatar } from 'antd';
+import { SearchOutlined, DownloadOutlined, UserAddOutlined, UserOutlined, TeamOutlined, HomeOutlined, EyeOutlined, EditOutlined, DeleteOutlined, UploadOutlined } from '@ant-design/icons';
 import './Population.less';
 import { desensitizeIdCard, desensitizePhoneNumber } from '../utils/desensitization';
 
@@ -206,7 +206,7 @@ const Population: React.FC = () => {
   // 保存人口信息
   const handleSavePerson = async () => {
     try {
-      const values = await personForm.validateFields();
+      await personForm.validateFields();
       if (currentPerson) {
         message.success('人口信息更新成功');
       } else {

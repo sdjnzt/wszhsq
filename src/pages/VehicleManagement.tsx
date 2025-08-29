@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Row, Col, Select, Button, Input, Table, Tag, Space, Modal, Form, Tabs, Upload, message } from 'antd';
-import { SearchOutlined, PlusOutlined, EditOutlined, DeleteOutlined, ExclamationCircleOutlined, CarOutlined, UploadOutlined } from '@ant-design/icons';
+import { SearchOutlined, PlusOutlined, EditOutlined, DeleteOutlined, ExclamationCircleOutlined, UploadOutlined } from '@ant-design/icons';
 import type { UploadProps } from 'antd';
 import './VehicleManagement.less';
 import dayjs from 'dayjs';

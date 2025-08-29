@@ -398,7 +398,7 @@ const Service: React.FC = () => {
       title: '操作',
       key: 'action',
       width: 200,
-      render: (_, record: any) => (
+      render: () => (
         <span>
           <Button type="link" size="small">详情</Button>
           <Button type="link" size="small">编辑</Button>
