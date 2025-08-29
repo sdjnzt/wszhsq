@@ -13,20 +13,14 @@ import {
   Form,
   Input,
   Select,
-  DatePicker,
   Tabs,
   Descriptions,
-  Timeline,
   Progress,
-  Alert,
   Switch,
-  Tree,
   Badge,
-  Tooltip,
   Popconfirm,
   Avatar,
   InputNumber,
-  Divider,
   Typography
 } from 'antd';
 import {
@@ -34,22 +28,15 @@ import {
   SettingOutlined,
   SyncOutlined,
   CheckCircleOutlined,
-  ExclamationCircleOutlined,
   ClockCircleOutlined,
   CloseCircleOutlined,
   PlusOutlined,
   EditOutlined,
   DeleteOutlined,
   EyeOutlined,
-  DownloadOutlined,
-  UploadOutlined,
-  DatabaseOutlined,
   CloudOutlined,
   WifiOutlined,
-  CameraOutlined,
-  LockOutlined,
-  UnlockOutlined,
-  ReloadOutlined
+  CameraOutlined
 } from '@ant-design/icons';
 import './InterfaceIntegration.less';
 
@@ -455,7 +442,7 @@ const InterfaceIntegration: React.FC = () => {
       { name: '儿童游乐系统', apiCount: 3, description: '儿童游乐设施系统' }
     ];
     
-    internalSystems.forEach((system, index) => {
+    internalSystems.forEach((system) => {
       platforms.push({
         id: (id++).toString(),
         name: system.name,
@@ -487,7 +474,7 @@ const InterfaceIntegration: React.FC = () => {
       { name: '业主积分系统', apiCount: 4, description: '业主积分奖励系统' }
     ];
     
-    externalSystems.forEach((system, index) => {
+    externalSystems.forEach((system) => {
       platforms.push({
         id: (id++).toString(),
         name: system.name,
@@ -524,7 +511,7 @@ const InterfaceIntegration: React.FC = () => {
       { name: '金融服务平台', apiCount: 10, description: '第三方金融服务平台' }
     ];
     
-    thirdPartySystems.forEach((system, index) => {
+    thirdPartySystems.forEach((system) => {
       platforms.push({
         id: (id++).toString(),
         name: system.name,
@@ -544,8 +531,6 @@ const InterfaceIntegration: React.FC = () => {
   const [selectedInterface, setSelectedInterface] = useState<ApiInterface | null>(null);
   const [selectedPlatform, setSelectedPlatform] = useState<PropertyPlatform | null>(null);
   const [isTerminalModalVisible, setIsTerminalModalVisible] = useState(false);
-  const [isInterfaceModalVisible, setIsInterfaceModalVisible] = useState(false);
-  const [isPlatformModalVisible, setIsPlatformModalVisible] = useState(false);
   const [isTestModalVisible, setIsTestModalVisible] = useState(false);
   const [isAddTerminalModalVisible, setIsAddTerminalModalVisible] = useState(false);
   const [isAddInterfaceModalVisible, setIsAddInterfaceModalVisible] = useState(false);
@@ -607,12 +592,12 @@ const InterfaceIntegration: React.FC = () => {
       key: 'status',
       render: (status: string) => {
         const statusMap = {
-          online: { text: '在线', color: 'success', icon: <CheckCircleOutlined /> },
-          offline: { text: '离线', color: 'default', icon: <CloseCircleOutlined /> },
-          error: { text: '错误', color: 'error', icon: <ExclamationCircleOutlined /> }
+          online: { text: '在线', color: 'success' },
+          offline: { text: '离线', color: 'default' },
+          error: { text: '错误', color: 'error' }
         };
-        const { text, color, icon } = statusMap[status as keyof typeof statusMap];
-        return <Badge status={color as any} text={text} />;
+        const { text, color } = statusMap[status as keyof typeof statusMap];
+        return <Badge status={color as 'success' | 'error' | 'default'} text={text} />;
       }
     },
     {
@@ -643,7 +628,7 @@ const InterfaceIntegration: React.FC = () => {
     {
       title: '操作',
       key: 'action',
-      render: (_: any, record: HardwareTerminal) => (
+      render: (_: unknown, record: HardwareTerminal) => (
         <Space size="small">
           <Button
             type="link"
@@ -711,12 +696,12 @@ const InterfaceIntegration: React.FC = () => {
       key: 'status',
       render: (status: string) => {
         const statusMap = {
-          active: { text: '活跃', color: 'success', icon: <CheckCircleOutlined /> },
-          inactive: { text: '停用', color: 'default', icon: <CloseCircleOutlined /> },
-          testing: { text: '测试中', color: 'processing', icon: <SyncOutlined spin /> }
+          active: { text: '活跃', color: 'success' },
+          inactive: { text: '停用', color: 'default' },
+          testing: { text: '测试中', color: 'processing' }
         };
-        const { text, color, icon } = statusMap[status as keyof typeof statusMap];
-        return <Badge status={color as any} text={text} />;
+        const { text, color } = statusMap[status as keyof typeof statusMap];
+        return <Badge status={color as 'success' | 'error' | 'default' | 'processing'} text={text} />;
       }
     },
     {
@@ -754,7 +739,7 @@ const InterfaceIntegration: React.FC = () => {
     {
       title: '操作',
       key: 'action',
-      render: (_: any, record: ApiInterface) => (
+      render: (_: unknown, record: ApiInterface) => (
         <Space size="small">
           <Button
             type="link"
@@ -832,12 +817,12 @@ const InterfaceIntegration: React.FC = () => {
       key: 'status',
       render: (status: string) => {
         const statusMap = {
-          connected: { text: '已连接', color: 'success', icon: <CheckCircleOutlined /> },
-          disconnected: { text: '未连接', color: 'default', icon: <CloseCircleOutlined /> },
-          error: { text: '连接错误', color: 'error', icon: <ExclamationCircleOutlined /> }
+          connected: { text: '已连接', color: 'success' },
+          disconnected: { text: '未连接', color: 'default' },
+          error: { text: '连接错误', color: 'error' }
         };
-        const { text, color, icon } = statusMap[status as keyof typeof statusMap];
-        return <Badge status={color as any} text={text} />;
+        const { text, color } = statusMap[status as keyof typeof statusMap];
+        return <Badge status={color as 'success' | 'error' | 'default'} text={text} />;
       }
     },
     {
@@ -861,14 +846,14 @@ const InterfaceIntegration: React.FC = () => {
           failed: { text: '失败', color: 'error', icon: <CloseCircleOutlined /> },
           pending: { text: '进行中', color: 'processing', icon: <ClockCircleOutlined /> }
         };
-        const { text, color, icon } = statusMap[status as keyof typeof statusMap];
-        return <Badge status={color as any} text={text} />;
+        const { text, color } = statusMap[status as keyof typeof statusMap];
+        return <Badge status={color as 'success' | 'error' | 'processing'} text={text} />;
       }
     },
     {
       title: '操作',
       key: 'action',
-      render: (_: any, record: PropertyPlatform) => (
+      render: (_: unknown, record: PropertyPlatform) => (
         <Space size="small">
           <Button
             type="link"
@@ -878,14 +863,14 @@ const InterfaceIntegration: React.FC = () => {
           >
             查看
           </Button>
-          <Button
-            type="link"
-            size="small"
-            icon={<SyncOutlined />}
-            onClick={() => handleSyncPlatform(record)}
-          >
-            同步
-          </Button>
+                      <Button
+              type="link"
+              size="small"
+              icon={<SyncOutlined />}
+              onClick={() => handleSyncPlatform()}
+            >
+              同步
+            </Button>
           <Button
             type="link"
             size="small"
@@ -926,7 +911,7 @@ const InterfaceIntegration: React.FC = () => {
     setIsAddTerminalModalVisible(true);
   };
 
-  const handleAddTerminalSubmit = (values: any) => {
+  const handleAddTerminalSubmit = (values: Omit<HardwareTerminal, 'id' | 'lastHeartbeat' | 'status'>) => {
     const newTerminal: HardwareTerminal = {
       id: Date.now().toString(),
       ...values,
@@ -938,7 +923,7 @@ const InterfaceIntegration: React.FC = () => {
     setIsAddTerminalModalVisible(false);
   };
 
-  const handleEditTerminalSubmit = (values: any) => {
+  const handleEditTerminalSubmit = (values: Partial<HardwareTerminal>) => {
     if (selectedTerminal) {
       setHardwareTerminals(prev => 
         prev.map(item => 
@@ -959,7 +944,7 @@ const InterfaceIntegration: React.FC = () => {
 
   const handleViewInterface = (apiInterface: ApiInterface) => {
     setSelectedInterface(apiInterface);
-    setIsInterfaceModalVisible(true);
+    // Note: Interface detail modal removed in simplified version
   };
 
   const handleTestInterface = (apiInterface: ApiInterface) => {
@@ -982,7 +967,7 @@ const InterfaceIntegration: React.FC = () => {
     setIsAddInterfaceModalVisible(true);
   };
 
-  const handleAddInterfaceSubmit = (values: any) => {
+  const handleAddInterfaceSubmit = (values: Omit<ApiInterface, 'id' | 'lastTest' | 'status' | 'responseTime' | 'successRate'>) => {
     const newInterface: ApiInterface = {
       id: Date.now().toString(),
       ...values,
@@ -996,7 +981,7 @@ const InterfaceIntegration: React.FC = () => {
     setIsAddInterfaceModalVisible(false);
   };
 
-  const handleEditInterfaceSubmit = (values: any) => {
+  const handleEditInterfaceSubmit = (values: Partial<ApiInterface>) => {
     if (selectedInterface) {
       setApiInterfaces(prev => 
         prev.map(item => 
@@ -1017,10 +1002,10 @@ const InterfaceIntegration: React.FC = () => {
 
   const handleViewPlatform = (platform: PropertyPlatform) => {
     setSelectedPlatform(platform);
-    setIsPlatformModalVisible(true);
+    // Note: Platform detail modal removed in simplified version
   };
 
-  const handleSyncPlatform = (platform: PropertyPlatform) => {
+  const handleSyncPlatform = () => {
     message.loading('正在同步数据...', 2);
     setTimeout(() => {
       message.success('数据同步完成');
@@ -1038,7 +1023,7 @@ const InterfaceIntegration: React.FC = () => {
     setIsAddPlatformModalVisible(true);
   };
 
-  const handleAddPlatformSubmit = (values: any) => {
+  const handleAddPlatformSubmit = (values: Omit<PropertyPlatform, 'id' | 'lastSync' | 'status' | 'syncStatus'>) => {
     const newPlatform: PropertyPlatform = {
       id: Date.now().toString(),
       ...values,
@@ -1051,7 +1036,7 @@ const InterfaceIntegration: React.FC = () => {
     setIsAddPlatformModalVisible(false);
   };
 
-  const handleEditPlatformSubmit = (values: any) => {
+  const handleEditPlatformSubmit = (values: Partial<PropertyPlatform>) => {
     if (selectedPlatform) {
       setPropertyPlatforms(prev => 
         prev.map(item => 
@@ -1070,7 +1055,7 @@ const InterfaceIntegration: React.FC = () => {
     message.success('平台删除成功');
   };
 
-  const handleTestSubmit = async (values: any) => {
+  const handleTestSubmit = async () => {  
     message.loading('正在测试接口...', 2);
     setTimeout(() => {
       message.success('接口测试完成');
