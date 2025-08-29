@@ -185,7 +185,7 @@ const VideoSurveillancePage: React.FC = () => {
             audio: index % 2 === 0,
             ptz: index % 4 === 0,
             nightVision: index % 3 !== 0,
-            lastMotion: status === 'motion' ? `2024-01-15 ${14 + (index % 10)}:${30 + (index % 30)}:00` : '',
+            lastMotion: status === 'motion' ? `2025-08-15 ${14 + (index % 10)}:${30 + (index % 30)}:00` : '',
             recordingTime: status === 'recording' ? 120 + (index % 60) : 0,
           };
         });

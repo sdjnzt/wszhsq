@@ -118,7 +118,7 @@ const Property: React.FC = () => {
       rating: '4.5分',
       status: '正常',
       contractStart: '2023-01-01',
-      contractEnd: '2025-12-31',
+      contractEnd: '2025-08-31',
       serviceLevel: '一级',
       staffCount: 45,
       apiStatus: '已对接',
@@ -174,7 +174,7 @@ const Property: React.FC = () => {
       rating: '4.7分',
       status: '正常',
       contractStart: '2022-12-01',
-      contractEnd: '2025-11-30',
+      contractEnd: '2025-08-30',
       serviceLevel: '一级',
       staffCount: 52,
       apiStatus: '已对接',
@@ -286,7 +286,7 @@ const Property: React.FC = () => {
       householdCount: 1200,
       population: 3600,
       status: '正常',
-      lastUpdate: '2024-01-15'
+      lastUpdate: '2025-08-15'
     },
     {
       key: '2',
@@ -297,7 +297,7 @@ const Property: React.FC = () => {
       householdCount: 980,
       population: 2940,
       status: '正常',
-      lastUpdate: '2024-01-15'
+      lastUpdate: '2025-08-15'
     },
     {
       key: '3',
@@ -308,7 +308,7 @@ const Property: React.FC = () => {
       householdCount: 1500,
       population: 4500,
       status: '正常',
-      lastUpdate: '2024-01-15'
+      lastUpdate: '2025-08-15'
     },
     {
       key: '4',
@@ -319,7 +319,7 @@ const Property: React.FC = () => {
       householdCount: 850,
       population: 2550,
       status: '整改中',
-      lastUpdate: '2024-01-15'
+      lastUpdate: '2025-08-15'
     },
     {
       key: '5',
@@ -330,7 +330,7 @@ const Property: React.FC = () => {
       householdCount: 1100,
       population: 3300,
       status: '正常',
-      lastUpdate: '2024-01-15'
+      lastUpdate: '2025-08-15'
     },
     {
       key: '6',
@@ -341,7 +341,7 @@ const Property: React.FC = () => {
       householdCount: 1750,
       population: 5250,
       status: '正常',
-      lastUpdate: '2024-01-15'
+      lastUpdate: '2025-08-15'
     },
   ];
 
@@ -354,7 +354,7 @@ const Property: React.FC = () => {
       gridName: '中都花园A区网格',
       contractType: '物业服务合同',
       startDate: '2023-01-01',
-      endDate: '2025-12-31',
+      endDate: '2025-08-31',
       amount: 1250000,
       status: '执行中',
       signDate: '2022-12-15',
@@ -380,7 +380,7 @@ const Property: React.FC = () => {
       gridName: '中都花园C区网格',
       contractType: '物业服务合同',
       startDate: '2022-12-01',
-      endDate: '2025-11-30',
+      endDate: '2025-08-30',
       amount: 1560000,
       status: '执行中',
       signDate: '2022-11-15',

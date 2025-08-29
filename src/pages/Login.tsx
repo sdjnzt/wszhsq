@@ -135,7 +135,7 @@ const Login: React.FC = () => {
         </Card>
 
         <div className="login-footer">
-          <p>© 2024 汶上县中都街道办事处智慧社区平台. All rights reserved.</p>
+          <p>© 2025 汶上县中都街道办事处智慧社区平台. All rights reserved.</p>
           <p>技术支持：智慧社区建设团队</p>
         </div>
       </div>

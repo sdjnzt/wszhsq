@@ -102,7 +102,7 @@ const Governance: React.FC = () => {
       location: '幸福小区3栋2单元',
       description: '楼道堆放杂物，影响疏散通道',
       reporter: '张明',
-      date: '2024-06-10',
+      date: '2025-08-10',
       status: '已解决',
     },
     {
@@ -111,7 +111,7 @@ const Governance: React.FC = () => {
       location: '阳光小区5栋外墙',
       description: '外墙瓷砖脱落，存在安全隐患',
       reporter: '李华',
-      date: '2024-06-08',
+      date: '2025-08-08',
       status: '处理中',
     },
     {
@@ -120,7 +120,7 @@ const Governance: React.FC = () => {
       location: '康乐小区南门路口',
       description: '路灯损坏，夜间存在安全隐患',
       reporter: '王强',
-      date: '2024-06-06',
+      date: '2025-08-06',
       status: '已解决',
     },
     {
@@ -129,7 +129,7 @@ const Governance: React.FC = () => {
       location: '和谐小区变电箱',
       description: '变电箱锁损坏，存在触电风险',
       reporter: '刘勇',
-      date: '2024-06-02',
+      date: '2025-08-02',
       status: '已解决',
     },
   ];

@@ -92,10 +92,10 @@ const Party: React.FC = () => {
 
   // 党组织活动数据
   const partyActivities = [
-    { title: '党支部组织生活会', date: '2024-06-15', location: '社区党群活动中心' },
-    { title: '学习贯彻十九届六中全会精神', date: '2024-05-20', location: '社区会议室' },
-    { title: '主题党日活动', date: '2024-04-25', location: '社区广场' },
-    { title: '党风廉政建设专题会', date: '2024-03-10', location: '社区党群活动中心' },
+    { title: '党支部组织生活会', date: '2025-08-15', location: '社区党群活动中心' },
+    { title: '学习贯彻十九届六中全会精神', date: '2025-05-20', location: '社区会议室' },
+    { title: '主题党日活动', date: '2025-08-25', location: '社区广场' },
+    { title: '党风廉政建设专题会', date: '2025-08-10', location: '社区党群活动中心' },
   ];
 
   return (

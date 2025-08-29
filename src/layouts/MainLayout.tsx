@@ -230,7 +230,7 @@ const MainLayout: React.FC = () => {
           </div>
         </Content>
         <Footer className="site-footer">
-          智慧社区智能化建设项目 ©2024
+          智慧社区智能化建设项目 ©2025
         </Footer>
       </Layout>
     </Layout>

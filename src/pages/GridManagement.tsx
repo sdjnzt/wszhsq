@@ -143,72 +143,72 @@ const gridMemberData: GridMemberData[] = [
 // 模拟事件数据 - 更真实的事件类型和分布
 const gridEventData: GridEventData[] = [
   // 网格一事件
-  { id: 1, name: '消防通道被电动车占用', type: '安全隐患', gridId: 1, status: '已处理', createTime: '2024-06-15', handler: '张建国', priority: '高', description: 'A区3栋消防通道被多辆电动车占用，存在严重安全隐患', location: '中都花园A区3栋', images: [] },
-  { id: 2, name: '垃圾箱周边垃圾散落', type: '环境卫生', gridId: 1, status: '处理中', createTime: '2024-06-14', handler: '李秀英', priority: '中', description: 'A区垃圾箱周边垃圾散落，影响环境卫生', location: '中都花园A区垃圾站', images: [] },
-  { id: 3, name: '高空抛物投诉', type: '邻里纠纷', gridId: 1, status: '已处理', createTime: '2024-06-13', handler: '王德明', priority: '高', description: 'A区5栋居民投诉高空抛物问题', location: '中都花园A区5栋', images: [] },
-  { id: 4, name: '楼道照明灯损坏', type: '设施维护', gridId: 1, status: '已处理', createTime: '2024-06-12', handler: '赵丽华', priority: '中', description: 'A区2栋楼道照明灯损坏，影响夜间出行', location: '中都花园A区2栋', images: [] },
-  { id: 5, name: '违规停车堵塞道路', type: '安全隐患', gridId: 1, status: '处理中', createTime: '2024-06-11', handler: '刘志强', priority: '中', description: 'A区主干道被违规停车堵塞', location: '中都花园A区主干道', images: [] },
+  { id: 1, name: '消防通道被电动车占用', type: '安全隐患', gridId: 1, status: '已处理', createTime: '2025-08-15', handler: '张建国', priority: '高', description: 'A区3栋消防通道被多辆电动车占用，存在严重安全隐患', location: '中都花园A区3栋', images: [] },
+  { id: 2, name: '垃圾箱周边垃圾散落', type: '环境卫生', gridId: 1, status: '处理中', createTime: '2025-08-14', handler: '李秀英', priority: '中', description: 'A区垃圾箱周边垃圾散落，影响环境卫生', location: '中都花园A区垃圾站', images: [] },
+  { id: 3, name: '高空抛物投诉', type: '邻里纠纷', gridId: 1, status: '已处理', createTime: '2025-08-13', handler: '王德明', priority: '高', description: 'A区5栋居民投诉高空抛物问题', location: '中都花园A区5栋', images: [] },
+  { id: 4, name: '楼道照明灯损坏', type: '设施维护', gridId: 1, status: '已处理', createTime: '2025-08-12', handler: '赵丽华', priority: '中', description: 'A区2栋楼道照明灯损坏，影响夜间出行', location: '中都花园A区2栋', images: [] },
+  { id: 5, name: '违规停车堵塞道路', type: '安全隐患', gridId: 1, status: '处理中', createTime: '2025-08-11', handler: '刘志强', priority: '中', description: 'A区主干道被违规停车堵塞', location: '中都花园A区主干道', images: [] },
   
   // 网格二事件
-  { id: 6, name: '外墙脱落安全隐患', type: '安全隐患', gridId: 2, status: '已处理', createTime: '2024-06-15', handler: '李明', priority: '紧急', description: 'B区1栋外墙出现脱落现象，存在严重安全隐患', location: '中都花园B区1栋', images: [] },
-  { id: 7, name: '噪音扰民投诉', type: '邻里纠纷', gridId: 2, status: '处理中', createTime: '2024-06-14', handler: '王丽娜', priority: '中', description: 'B区3栋居民投诉装修噪音扰民', location: '中都花园B区3栋', images: [] },
-  { id: 8, name: '绿化带被破坏', type: '环境卫生', gridId: 2, status: '已处理', createTime: '2024-06-13', handler: '赵国强', priority: '低', description: 'B区绿化带被踩踏破坏', location: '中都花园B区绿化带', images: [] },
-  { id: 9, name: '电梯故障报修', type: '设施维护', gridId: 2, status: '已处理', createTime: '2024-06-12', handler: '刘美华', priority: '高', description: 'B区2栋电梯出现故障', location: '中都花园B区2栋', images: [] },
-  { id: 10, name: '楼道杂物堆放', type: '安全隐患', gridId: 2, status: '处理中', createTime: '2024-06-11', handler: '陈志明', priority: '中', description: 'B区4栋楼道杂物堆放严重', location: '中都花园B区4栋', images: [] },
+  { id: 6, name: '外墙脱落安全隐患', type: '安全隐患', gridId: 2, status: '已处理', createTime: '2025-08-15', handler: '李明', priority: '紧急', description: 'B区1栋外墙出现脱落现象，存在严重安全隐患', location: '中都花园B区1栋', images: [] },
+  { id: 7, name: '噪音扰民投诉', type: '邻里纠纷', gridId: 2, status: '处理中', createTime: '2025-08-14', handler: '王丽娜', priority: '中', description: 'B区3栋居民投诉装修噪音扰民', location: '中都花园B区3栋', images: [] },
+  { id: 8, name: '绿化带被破坏', type: '环境卫生', gridId: 2, status: '已处理', createTime: '2025-08-13', handler: '赵国强', priority: '低', description: 'B区绿化带被踩踏破坏', location: '中都花园B区绿化带', images: [] },
+  { id: 9, name: '电梯故障报修', type: '设施维护', gridId: 2, status: '已处理', createTime: '2025-08-12', handler: '刘美华', priority: '高', description: 'B区2栋电梯出现故障', location: '中都花园B区2栋', images: [] },
+  { id: 10, name: '楼道杂物堆放', type: '安全隐患', gridId: 2, status: '处理中', createTime: '2025-08-11', handler: '陈志明', priority: '中', description: 'B区4栋楼道杂物堆放严重', location: '中都花园B区4栋', images: [] },
   
   // 网格三事件
-  { id: 11, name: '井盖损坏安全隐患', type: '安全隐患', gridId: 3, status: '已处理', createTime: '2024-06-15', handler: '王华', priority: '紧急', description: 'C区道路井盖损坏，存在安全隐患', location: '中都花园C区道路', images: [] },
-  { id: 12, name: '垃圾分类不规范', type: '环境卫生', gridId: 3, status: '处理中', createTime: '2024-06-14', handler: '赵秀英', priority: '中', description: 'C区垃圾分类投放不规范', location: '中都花园C区垃圾站', images: [] },
-  { id: 13, name: '宠物粪便未清理', type: '环境卫生', gridId: 3, status: '已处理', createTime: '2024-06-13', handler: '刘德明', priority: '低', description: 'C区宠物粪便未及时清理', location: '中都花园C区公共区域', images: [] },
-  { id: 14, name: '健身器材损坏', type: '设施维护', gridId: 3, status: '已处理', createTime: '2024-06-12', handler: '陈丽华', priority: '中', description: 'C区健身器材出现损坏', location: '中都花园C区健身区', images: [] },
-  { id: 15, name: '车辆刮蹭纠纷', type: '邻里纠纷', gridId: 3, status: '处理中', createTime: '2024-06-11', handler: '孙志强', priority: '中', description: 'C区停车场车辆刮蹭纠纷', location: '中都花园C区停车场', images: [] },
+  { id: 11, name: '井盖损坏安全隐患', type: '安全隐患', gridId: 3, status: '已处理', createTime: '2025-08-15', handler: '王华', priority: '紧急', description: 'C区道路井盖损坏，存在安全隐患', location: '中都花园C区道路', images: [] },
+  { id: 12, name: '垃圾分类不规范', type: '环境卫生', gridId: 3, status: '处理中', createTime: '2025-08-14', handler: '赵秀英', priority: '中', description: 'C区垃圾分类投放不规范', location: '中都花园C区垃圾站', images: [] },
+  { id: 13, name: '宠物粪便未清理', type: '环境卫生', gridId: 3, status: '已处理', createTime: '2025-08-13', handler: '刘德明', priority: '低', description: 'C区宠物粪便未及时清理', location: '中都花园C区公共区域', images: [] },
+  { id: 14, name: '健身器材损坏', type: '设施维护', gridId: 3, status: '已处理', createTime: '2025-08-12', handler: '陈丽华', priority: '中', description: 'C区健身器材出现损坏', location: '中都花园C区健身区', images: [] },
+  { id: 15, name: '车辆刮蹭纠纷', type: '邻里纠纷', gridId: 3, status: '处理中', createTime: '2025-08-11', handler: '孙志强', priority: '中', description: 'C区停车场车辆刮蹭纠纷', location: '中都花园C区停车场', images: [] },
   
   // 网格四事件
-  { id: 16, name: '路灯不亮影响出行', type: '设施维护', gridId: 4, status: '已处理', createTime: '2024-06-15', handler: '赵红', priority: '中', description: 'D区路灯不亮，影响夜间出行安全', location: '中都花园D区道路', images: [] },
-  { id: 17, name: '楼道小广告乱贴', type: '环境卫生', gridId: 4, status: '处理中', createTime: '2024-06-14', handler: '刘丽娜', priority: '低', description: 'D区楼道小广告乱贴现象严重', location: '中都花园D区楼道', images: [] },
-  { id: 18, name: '公共座椅损坏', type: '设施维护', gridId: 4, status: '已处理', createTime: '2024-06-13', handler: '陈国强', priority: '低', description: 'D区公共座椅出现损坏', location: '中都花园D区休闲区', images: [] },
-  { id: 19, name: '装修垃圾乱堆放', type: '环境卫生', gridId: 4, status: '处理中', createTime: '2024-06-12', handler: '孙美华', priority: '中', description: 'D区装修垃圾乱堆放', location: '中都花园D区装修现场', images: [] },
-  { id: 20, name: '电动车违规充电', type: '安全隐患', gridId: 4, status: '已处理', createTime: '2024-06-11', handler: '周志明', priority: '高', description: 'D区电动车违规充电现象', location: '中都花园D区楼道', images: [] },
+  { id: 16, name: '路灯不亮影响出行', type: '设施维护', gridId: 4, status: '已处理', createTime: '2025-08-15', handler: '赵红', priority: '中', description: 'D区路灯不亮，影响夜间出行安全', location: '中都花园D区道路', images: [] },
+  { id: 17, name: '楼道小广告乱贴', type: '环境卫生', gridId: 4, status: '处理中', createTime: '2025-08-14', handler: '刘丽娜', priority: '低', description: 'D区楼道小广告乱贴现象严重', location: '中都花园D区楼道', images: [] },
+  { id: 18, name: '公共座椅损坏', type: '设施维护', gridId: 4, status: '已处理', createTime: '2025-08-13', handler: '陈国强', priority: '低', description: 'D区公共座椅出现损坏', location: '中都花园D区休闲区', images: [] },
+  { id: 19, name: '装修垃圾乱堆放', type: '环境卫生', gridId: 4, status: '处理中', createTime: '2025-08-12', handler: '孙美华', priority: '中', description: 'D区装修垃圾乱堆放', location: '中都花园D区装修现场', images: [] },
+  { id: 20, name: '电动车违规充电', type: '安全隐患', gridId: 4, status: '已处理', createTime: '2025-08-11', handler: '周志明', priority: '高', description: 'D区电动车违规充电现象', location: '中都花园D区楼道', images: [] },
   
   // 网格五事件
-  { id: 21, name: '儿童游乐设施损坏', type: '设施维护', gridId: 5, status: '已处理', createTime: '2024-06-15', handler: '刘强', priority: '中', description: 'E区儿童游乐设施出现损坏', location: '中都花园E区儿童游乐区', images: [] },
-  { id: 22, name: '绿化浇水不及时', type: '环境卫生', gridId: 5, status: '处理中', createTime: '2024-06-14', handler: '陈秀英', priority: '低', description: 'E区绿化浇水不及时', location: '中都花园E区绿化带', images: [] },
-  { id: 23, name: '楼道感应灯故障', type: '设施维护', gridId: 5, status: '已处理', createTime: '2024-06-13', handler: '孙德明', priority: '中', description: 'E区楼道感应灯出现故障', location: '中都花园E区楼道', images: [] },
-  { id: 24, name: '公共区域晾晒衣物', type: '环境卫生', gridId: 5, status: '处理中', createTime: '2024-06-12', handler: '周丽华', priority: '低', description: 'E区公共区域晾晒衣物', location: '中都花园E区公共区域', images: [] },
-  { id: 25, name: '车辆乱停乱放', type: '安全隐患', gridId: 5, status: '已处理', createTime: '2024-06-11', handler: '张志强', priority: '中', description: 'E区车辆乱停乱放现象', location: '中都花园E区道路', images: [] },
+  { id: 21, name: '儿童游乐设施损坏', type: '设施维护', gridId: 5, status: '已处理', createTime: '2025-08-15', handler: '刘强', priority: '中', description: 'E区儿童游乐设施出现损坏', location: '中都花园E区儿童游乐区', images: [] },
+  { id: 22, name: '绿化浇水不及时', type: '环境卫生', gridId: 5, status: '处理中', createTime: '2025-08-14', handler: '陈秀英', priority: '低', description: 'E区绿化浇水不及时', location: '中都花园E区绿化带', images: [] },
+  { id: 23, name: '楼道感应灯故障', type: '设施维护', gridId: 5, status: '已处理', createTime: '2025-08-13', handler: '孙德明', priority: '中', description: 'E区楼道感应灯出现故障', location: '中都花园E区楼道', images: [] },
+  { id: 24, name: '公共区域晾晒衣物', type: '环境卫生', gridId: 5, status: '处理中', createTime: '2025-08-12', handler: '周丽华', priority: '低', description: 'E区公共区域晾晒衣物', location: '中都花园E区公共区域', images: [] },
+  { id: 25, name: '车辆乱停乱放', type: '安全隐患', gridId: 5, status: '已处理', createTime: '2025-08-11', handler: '张志强', priority: '中', description: 'E区车辆乱停乱放现象', location: '中都花园E区道路', images: [] },
   
   // 网格六事件
-  { id: 26, name: '电梯按键损坏', type: '设施维护', gridId: 6, status: '已处理', createTime: '2024-06-15', handler: '陈明', priority: '中', description: 'F区电梯按键出现损坏', location: '中都花园F区电梯', images: [] },
-  { id: 27, name: '楼道卫生不清洁', type: '环境卫生', gridId: 6, status: '处理中', createTime: '2024-06-14', handler: '孙丽娜', priority: '中', description: 'F区楼道卫生清洁不及时', location: '中都花园F区楼道', images: [] },
-  { id: 28, name: '公共区域吸烟', type: '环境卫生', gridId: 6, status: '已处理', createTime: '2024-06-13', handler: '周国强', priority: '低', description: 'F区公共区域吸烟现象', location: '中都花园F区公共区域', images: [] },
-  { id: 29, name: '健身器材维护不及时', type: '设施维护', gridId: 6, status: '处理中', createTime: '2024-06-12', handler: '张美华', priority: '中', description: 'F区健身器材维护不及时', location: '中都花园F区健身区', images: [] },
-  { id: 30, name: '楼道堆放自行车', type: '安全隐患', gridId: 6, status: '已处理', createTime: '2024-06-11', handler: '李志明', priority: '中', description: 'F区楼道堆放自行车', location: '中都花园F区楼道', images: [] },
+  { id: 26, name: '电梯按键损坏', type: '设施维护', gridId: 6, status: '已处理', createTime: '2025-08-15', handler: '陈明', priority: '中', description: 'F区电梯按键出现损坏', location: '中都花园F区电梯', images: [] },
+  { id: 27, name: '楼道卫生不清洁', type: '环境卫生', gridId: 6, status: '处理中', createTime: '2025-08-14', handler: '孙丽娜', priority: '中', description: 'F区楼道卫生清洁不及时', location: '中都花园F区楼道', images: [] },
+  { id: 28, name: '公共区域吸烟', type: '环境卫生', gridId: 6, status: '已处理', createTime: '2025-08-13', handler: '周国强', priority: '低', description: 'F区公共区域吸烟现象', location: '中都花园F区公共区域', images: [] },
+  { id: 29, name: '健身器材维护不及时', type: '设施维护', gridId: 6, status: '处理中', createTime: '2025-08-12', handler: '张美华', priority: '中', description: 'F区健身器材维护不及时', location: '中都花园F区健身区', images: [] },
+  { id: 30, name: '楼道堆放自行车', type: '安全隐患', gridId: 6, status: '已处理', createTime: '2025-08-11', handler: '李志明', priority: '中', description: 'F区楼道堆放自行车', location: '中都花园F区楼道', images: [] },
   
   // 网格七事件
-  { id: 31, name: '垃圾箱满溢未清理', type: '环境卫生', gridId: 7, status: '已处理', createTime: '2024-06-15', handler: '孙伟', priority: '中', description: 'G区垃圾箱满溢未及时清理', location: '中都花园G区垃圾站', images: [] },
-  { id: 32, name: '楼道照明不足', type: '设施维护', gridId: 7, status: '处理中', createTime: '2024-06-14', handler: '周秀英', priority: '中', description: 'G区楼道照明不足', location: '中都花园G区楼道', images: [] },
-  { id: 33, name: '公共区域乱扔垃圾', type: '环境卫生', gridId: 7, status: '已处理', createTime: '2024-06-13', handler: '张德明', priority: '低', description: 'G区公共区域乱扔垃圾', location: '中都花园G区公共区域', images: [] },
-  { id: 34, name: '电梯故障频发', type: '设施维护', gridId: 7, status: '处理中', createTime: '2024-06-12', handler: '李丽华', priority: '高', description: 'G区电梯故障频发', location: '中都花园G区电梯', images: [] },
-  { id: 35, name: '楼道感应门故障', type: '设施维护', gridId: 7, status: '已处理', createTime: '2024-06-11', handler: '刘志强', priority: '中', description: 'G区楼道感应门出现故障', location: '中都花园G区楼道', images: [] },
+  { id: 31, name: '垃圾箱满溢未清理', type: '环境卫生', gridId: 7, status: '已处理', createTime: '2025-08-15', handler: '孙伟', priority: '中', description: 'G区垃圾箱满溢未及时清理', location: '中都花园G区垃圾站', images: [] },
+  { id: 32, name: '楼道照明不足', type: '设施维护', gridId: 7, status: '处理中', createTime: '2025-08-14', handler: '周秀英', priority: '中', description: 'G区楼道照明不足', location: '中都花园G区楼道', images: [] },
+  { id: 33, name: '公共区域乱扔垃圾', type: '环境卫生', gridId: 7, status: '已处理', createTime: '2025-08-13', handler: '张德明', priority: '低', description: 'G区公共区域乱扔垃圾', location: '中都花园G区公共区域', images: [] },
+  { id: 34, name: '电梯故障频发', type: '设施维护', gridId: 7, status: '处理中', createTime: '2025-08-12', handler: '李丽华', priority: '高', description: 'G区电梯故障频发', location: '中都花园G区电梯', images: [] },
+  { id: 35, name: '楼道感应门故障', type: '设施维护', gridId: 7, status: '已处理', createTime: '2025-08-11', handler: '刘志强', priority: '中', description: 'G区楼道感应门出现故障', location: '中都花园G区楼道', images: [] },
   
   // 网格八事件
-  { id: 36, name: '外墙渗水问题', type: '设施维护', gridId: 8, status: '已处理', createTime: '2024-06-15', handler: '周杰', priority: '中', description: 'H区外墙出现渗水问题', location: '中都花园H区外墙', images: [] },
-  { id: 37, name: '绿化带被踩踏', type: '环境卫生', gridId: 8, status: '处理中', createTime: '2024-06-14', handler: '张丽娜', priority: '低', description: 'H区绿化带被踩踏破坏', location: '中都花园H区绿化带', images: [] },
-  { id: 38, name: '楼道小广告清理', type: '环境卫生', gridId: 8, status: '已处理', createTime: '2024-06-13', handler: '李国强', priority: '低', description: 'H区楼道小广告清理', location: '中都花园H区楼道', images: [] },
-  { id: 39, name: '公共座椅维护', type: '设施维护', gridId: 8, status: '处理中', createTime: '2024-06-12', handler: '刘美华', priority: '低', description: 'H区公共座椅需要维护', location: '中都花园H区休闲区', images: [] },
-  { id: 40, name: '车辆刮蹭纠纷调解', type: '邻里纠纷', gridId: 8, status: '已处理', createTime: '2024-06-11', handler: '陈志明', priority: '中', description: 'H区停车场车辆刮蹭纠纷调解', location: '中都花园H区停车场', images: [] },
+  { id: 36, name: '外墙渗水问题', type: '设施维护', gridId: 8, status: '已处理', createTime: '2025-08-15', handler: '周杰', priority: '中', description: 'H区外墙出现渗水问题', location: '中都花园H区外墙', images: [] },
+  { id: 37, name: '绿化带被踩踏', type: '环境卫生', gridId: 8, status: '处理中', createTime: '2025-08-14', handler: '张丽娜', priority: '低', description: 'H区绿化带被踩踏破坏', location: '中都花园H区绿化带', images: [] },
+  { id: 38, name: '楼道小广告清理', type: '环境卫生', gridId: 8, status: '已处理', createTime: '2025-08-13', handler: '李国强', priority: '低', description: 'H区楼道小广告清理', location: '中都花园H区楼道', images: [] },
+  { id: 39, name: '公共座椅维护', type: '设施维护', gridId: 8, status: '处理中', createTime: '2025-08-12', handler: '刘美华', priority: '低', description: 'H区公共座椅需要维护', location: '中都花园H区休闲区', images: [] },
+  { id: 40, name: '车辆刮蹭纠纷调解', type: '邻里纠纷', gridId: 8, status: '已处理', createTime: '2025-08-11', handler: '陈志明', priority: '中', description: 'H区停车场车辆刮蹭纠纷调解', location: '中都花园H区停车场', images: [] },
   
   // 更多事件数据...
-  { id: 41, name: '楼道感应灯维修', type: '设施维护', gridId: 1, status: '已处理', createTime: '2024-06-10', handler: '赵丽华', priority: '中', description: 'A区楼道感应灯维修完成', location: '中都花园A区楼道', images: [] },
-  { id: 42, name: '绿化带修剪', type: '环境卫生', gridId: 2, status: '已处理', createTime: '2024-06-10', handler: '王丽娜', priority: '低', description: 'B区绿化带修剪完成', location: '中都花园B区绿化带', images: [] },
-  { id: 43, name: '健身器材检查', type: '设施维护', gridId: 3, status: '已处理', createTime: '2024-06-10', handler: '陈丽华', priority: '中', description: 'C区健身器材安全检查完成', location: '中都花园C区健身区', images: [] },
-  { id: 44, name: '楼道卫生清洁', type: '环境卫生', gridId: 4, status: '已处理', createTime: '2024-06-10', handler: '刘丽娜', priority: '中', description: 'D区楼道卫生清洁完成', location: '中都花园D区楼道', images: [] },
-  { id: 45, name: '儿童游乐设施检查', type: '设施维护', gridId: 5, status: '已处理', createTime: '2024-06-10', handler: '陈秀英', priority: '中', description: 'E区儿童游乐设施安全检查完成', location: '中都花园E区儿童游乐区', images: [] },
-  { id: 46, name: '电梯维护保养', type: '设施维护', gridId: 6, status: '已处理', createTime: '2024-06-10', handler: '张美华', priority: '中', description: 'F区电梯维护保养完成', location: '中都花园F区电梯', images: [] },
-  { id: 47, name: '垃圾站清洁消毒', type: '环境卫生', gridId: 7, status: '已处理', createTime: '2024-06-10', handler: '周秀英', priority: '中', description: 'G区垃圾站清洁消毒完成', location: '中都花园G区垃圾站', images: [] },
-  { id: 48, name: '外墙维修施工', type: '设施维护', gridId: 8, status: '处理中', createTime: '2024-06-10', handler: '张丽娜', priority: '中', description: 'H区外墙维修施工进行中', location: '中都花园H区外墙', images: [] },
-  { id: 49, name: '楼道感应门维修', type: '设施维护', gridId: 1, status: '已处理', createTime: '2024-06-09', handler: '刘志强', priority: '中', description: 'A区楼道感应门维修完成', location: '中都花园A区楼道', images: [] },
-  { id: 50, name: '绿化浇水作业', type: '环境卫生', gridId: 2, status: '已处理', createTime: '2024-06-09', handler: '赵国强', priority: '低', description: 'B区绿化浇水作业完成', location: '中都花园B区绿化带', images: [] }
+  { id: 41, name: '楼道感应灯维修', type: '设施维护', gridId: 1, status: '已处理', createTime: '2025-08-10', handler: '赵丽华', priority: '中', description: 'A区楼道感应灯维修完成', location: '中都花园A区楼道', images: [] },
+  { id: 42, name: '绿化带修剪', type: '环境卫生', gridId: 2, status: '已处理', createTime: '2025-08-10', handler: '王丽娜', priority: '低', description: 'B区绿化带修剪完成', location: '中都花园B区绿化带', images: [] },
+  { id: 43, name: '健身器材检查', type: '设施维护', gridId: 3, status: '已处理', createTime: '2025-08-10', handler: '陈丽华', priority: '中', description: 'C区健身器材安全检查完成', location: '中都花园C区健身区', images: [] },
+  { id: 44, name: '楼道卫生清洁', type: '环境卫生', gridId: 4, status: '已处理', createTime: '2025-08-10', handler: '刘丽娜', priority: '中', description: 'D区楼道卫生清洁完成', location: '中都花园D区楼道', images: [] },
+  { id: 45, name: '儿童游乐设施检查', type: '设施维护', gridId: 5, status: '已处理', createTime: '2025-08-10', handler: '陈秀英', priority: '中', description: 'E区儿童游乐设施安全检查完成', location: '中都花园E区儿童游乐区', images: [] },
+  { id: 46, name: '电梯维护保养', type: '设施维护', gridId: 6, status: '已处理', createTime: '2025-08-10', handler: '张美华', priority: '中', description: 'F区电梯维护保养完成', location: '中都花园F区电梯', images: [] },
+  { id: 47, name: '垃圾站清洁消毒', type: '环境卫生', gridId: 7, status: '已处理', createTime: '2025-08-10', handler: '周秀英', priority: '中', description: 'G区垃圾站清洁消毒完成', location: '中都花园G区垃圾站', images: [] },
+  { id: 48, name: '外墙维修施工', type: '设施维护', gridId: 8, status: '处理中', createTime: '2025-08-10', handler: '张丽娜', priority: '中', description: 'H区外墙维修施工进行中', location: '中都花园H区外墙', images: [] },
+  { id: 49, name: '楼道感应门维修', type: '设施维护', gridId: 1, status: '已处理', createTime: '2025-08-09', handler: '刘志强', priority: '中', description: 'A区楼道感应门维修完成', location: '中都花园A区楼道', images: [] },
+  { id: 50, name: '绿化浇水作业', type: '环境卫生', gridId: 2, status: '已处理', createTime: '2025-08-09', handler: '赵国强', priority: '低', description: 'B区绿化浇水作业完成', location: '中都花园B区绿化带', images: [] }
 ];
 
 const GridManagement: React.FC = () => {
@@ -681,7 +681,7 @@ const GridManagement: React.FC = () => {
           <Card className="stat-card">
             <Statistic 
               title="本月事件" 
-              value={gridEventData.filter(e => e.createTime.startsWith('2024-6')).length} 
+              value={gridEventData.filter(e => e.createTime.startsWith('2025-6')).length} 
               prefix={<AlertOutlined />} 
               valueStyle={{ color: '#fa8c16' }}
             />

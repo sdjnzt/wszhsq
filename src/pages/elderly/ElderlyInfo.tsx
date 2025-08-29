@@ -54,7 +54,7 @@ const ElderlyInfo: React.FC = () => {
           const gender = age > 80 ? (Math.random() > 0.3 ? '女' : '男') : (Math.random() > 0.5 ? '男' : '女');
           
           // 生成真实的身份证号
-          const birthYear = 2024 - age;
+          const birthYear = 2025 - age;
           const birthMonth = Math.floor(Math.random() * 12) + 1;
           const birthDay = Math.floor(Math.random() * 28) + 1;
           const idCard = `370822${birthYear}${birthMonth.toString().padStart(2, '0')}${birthDay.toString().padStart(2, '0')}${Math.floor(1000 + Math.random() * 9000)}`;
