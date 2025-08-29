@@ -1,0 +1,470 @@
+.government-system {
+  padding: 24px;
+  background: #f5f5f5;
+  min-height: 100vh;
+
+  .page-header {
+    margin-bottom: 24px;
+    text-align: center;
+    
+    .ant-typography {
+      h2 {
+        color: #1890ff;
+        margin-bottom: 8px;
+        
+        .anticon {
+          margin-right: 12px;
+          font-size: 28px;
+        }
+      }
+      
+      .ant-typography-text {
+        font-size: 16px;
+        color: #666;
+      }
+    }
+  }
+
+  .overview-row {
+    margin-bottom: 24px;
+    
+    .ant-card {
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      }
+      
+      .overview-item {
+        display: flex;
+        align-items: center;
+        
+        .overview-icon {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 16px;
+          font-size: 24px;
+          
+          &.active {
+            background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+            color: white;
+          }
+          
+          &.success {
+            background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+            color: white;
+          }
+          
+          &.warning {
+            background: linear-gradient(135deg, #fa8c16 0%, #ffc53d 100%);
+            color: white;
+          }
+          
+          &.error {
+            background: linear-gradient(135deg, #ff4d4f 0%, #ff7875 100%);
+            color: white;
+          }
+        }
+        
+        .overview-content {
+          flex: 1;
+          
+          .overview-number {
+            font-size: 28px;
+            font-weight: 600;
+            color: #262626;
+            line-height: 1;
+            margin-bottom: 4px;
+          }
+          
+          .overview-label {
+            font-size: 14px;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+
+  .main-tabs {
+    .ant-tabs-nav {
+      margin-bottom: 16px;
+      
+      .ant-tabs-tab {
+        padding: 12px 24px;
+        font-size: 14px;
+        font-weight: 500;
+        
+        .anticon {
+          margin-right: 8px;
+        }
+        
+        &.ant-tabs-tab-active {
+          .ant-tabs-tab-btn {
+            color: #1890ff;
+          }
+        }
+      }
+    }
+    
+    .ant-tabs-content-holder {
+      .ant-tabs-tabpane {
+        .ant-card {
+          border-radius: 8px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          
+          .ant-card-head {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-bottom: 1px solid #e8e8e8;
+            border-radius: 8px 8px 0 0;
+            
+            .ant-card-head-title {
+              font-size: 16px;
+              font-weight: 600;
+              color: #262626;
+            }
+            
+            .ant-card-extra {
+              .ant-btn {
+                height: 32px;
+                padding: 0 16px;
+                border-radius: 6px;
+                font-weight: 500;
+              }
+            }
+          }
+          
+          .ant-card-body {
+            padding: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-table {
+    .ant-table-thead > tr > th {
+      background: #fafafa;
+      border-bottom: 1px solid #e8e8e8;
+      font-weight: 600;
+      color: #262626;
+      padding: 16px 12px;
+    }
+    
+    .ant-table-tbody > tr > td {
+      border-bottom: 1px solid #f0f0f0;
+      padding: 16px 12px;
+    }
+    
+    .ant-table-tbody > tr:hover > td {
+      background: #f5f5f5;
+    }
+  }
+
+  .ant-tag {
+    border-radius: 4px;
+    font-weight: 500;
+    padding: 4px 8px;
+    
+    &.ant-tag-green {
+      background: #f6ffed;
+      border-color: #b7eb8f;
+      color: #52c41a;
+    }
+    
+    &.ant-tag-red {
+      background: #fff2f0;
+      border-color: #ffccc7;
+      color: #ff4d4f;
+    }
+    
+    &.ant-tag-orange {
+      background: #fff7e6;
+      border-color: #ffd591;
+      color: #fa8c16;
+    }
+    
+    &.ant-tag-blue {
+      background: #e6f7ff;
+      border-color: #91d5ff;
+      color: #1890ff;
+    }
+    
+    &.ant-tag-default {
+      background: #f5f5f5;
+      border-color: #d9d9d9;
+      color: #666;
+    }
+  }
+
+  .ant-btn {
+    border-radius: 6px;
+    font-weight: 500;
+    
+    &.ant-btn-sm {
+      height: 28px;
+      padding: 0 12px;
+      font-size: 12px;
+    }
+    
+    &.ant-btn-primary {
+      background: #1890ff;
+      border-color: #1890ff;
+      
+      &:hover {
+        background: #40a9ff;
+        border-color: #40a9ff;
+      }
+    }
+  }
+
+  .ant-progress {
+    &.ant-progress-small {
+      .ant-progress-bg {
+        height: 6px;
+        border-radius: 3px;
+      }
+      
+      .ant-progress-text {
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .ant-alert {
+    border-radius: 6px;
+    border: 1px solid #d9d9d9;
+    
+    .ant-alert-message {
+      font-weight: 600;
+      color: #262626;
+    }
+    
+    .ant-alert-description {
+      color: #666;
+    }
+  }
+
+  .config-tips {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 16px;
+    border-left: 4px solid #1890ff;
+    
+    h4 {
+      margin: 0 0 12px 0;
+      color: #262626;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      
+      li {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 4px;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .ant-modal {
+    .ant-modal-header {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-bottom: 1px solid #e8e8e8;
+      border-radius: 8px 8px 0 0;
+      
+      .ant-modal-title {
+        font-weight: 600;
+        color: #262626;
+      }
+    }
+    
+    .ant-modal-body {
+      padding: 24px;
+    }
+    
+    .ant-form-item-label > label {
+      font-weight: 500;
+      color: #262626;
+    }
+    
+    .ant-input,
+    .ant-select-selector,
+    .ant-picker {
+      border-radius: 6px;
+      border: 1px solid #d9d9d9;
+      
+      &:hover {
+        border-color: #40a9ff;
+      }
+      
+      &:focus,
+      &.ant-input-focused,
+      &.ant-select-focused .ant-select-selector,
+      &.ant-picker-focused {
+        border-color: #1890ff;
+        box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+      }
+    }
+    
+    .ant-input-textarea {
+      .ant-input {
+        border-radius: 6px;
+      }
+    }
+  }
+
+  .ant-descriptions {
+    .ant-descriptions-item-label {
+      font-weight: 600;
+      color: #262626;
+      background: #fafafa;
+    }
+    
+    .ant-descriptions-item-content {
+      color: #666;
+    }
+  }
+
+  // 响应式设计
+  @media (max-width: 768px) {
+    padding: 16px;
+    
+    .overview-row {
+      .ant-col {
+        margin-bottom: 16px;
+      }
+      
+      .overview-item {
+        .overview-icon {
+          width: 50px;
+          height: 50px;
+          font-size: 20px;
+          margin-right: 12px;
+        }
+        
+        .overview-content {
+          .overview-number {
+            font-size: 24px;
+          }
+          
+          .overview-label {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    
+    .main-tabs {
+      .ant-tabs-nav {
+        .ant-tabs-tab {
+          padding: 8px 16px;
+          font-size: 13px;
+        }
+      }
+    }
+    
+    .page-header {
+      .ant-typography {
+        h2 {
+          font-size: 20px;
+        }
+        
+        .ant-typography-text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  // 动画效果
+  .ant-card,
+  .ant-table,
+  .ant-btn,
+  .overview-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  // 加载状态样式
+  .ant-spin {
+    .ant-spin-dot {
+      i {
+        background-color: #1890ff;
+      }
+    }
+  }
+
+  // 消息提示样式
+  .ant-message {
+    .ant-message-notice {
+      .ant-message-notice-content {
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  // 标签页内容区域
+  .ant-tabs-content {
+    .ant-tabs-tabpane {
+      .ant-card {
+        margin-bottom: 16px;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  // 表格操作列
+  .ant-table-tbody {
+    .ant-table-cell {
+      .ant-space {
+        .ant-btn {
+          margin-right: 8px;
+          
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // 进度条状态
+  .ant-progress-status-success {
+    .ant-progress-bg {
+      background-color: #52c41a;
+    }
+    
+    .ant-progress-text {
+      color: #52c41a;
+    }
+  }
+  
+  .ant-progress-status-exception {
+    .ant-progress-bg {
+      background-color: #ff4d4f;
+    }
+    
+    .ant-progress-text {
+      color: #ff4d4f;
+    }
+  }
+}

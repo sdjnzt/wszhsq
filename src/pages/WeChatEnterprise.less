@@ -1,0 +1,304 @@
+.wechat-enterprise {
+  padding: 24px;
+  background: #f5f5f5;
+  min-height: 100vh;
+
+  .page-header {
+    margin-bottom: 24px;
+    text-align: center;
+    
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #1890ff;
+      margin-bottom: 8px;
+      
+      .anticon {
+        margin-right: 12px;
+        font-size: 32px;
+      }
+    }
+    
+    p {
+      font-size: 16px;
+      color: #666;
+      margin: 0;
+    }
+  }
+
+  .stats-row {
+    margin-bottom: 24px;
+    
+    .ant-card {
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      }
+      
+      .ant-statistic-title {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 8px;
+      }
+      
+      .ant-statistic-content {
+        .ant-statistic-content-value {
+          font-size: 24px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .main-tabs {
+    .ant-tabs-nav {
+      margin-bottom: 16px;
+      
+      .ant-tabs-tab {
+        padding: 12px 24px;
+        font-size: 14px;
+        font-weight: 500;
+        
+        .anticon {
+          margin-right: 8px;
+        }
+        
+        &.ant-tabs-tab-active {
+          .ant-tabs-tab-btn {
+            color: #1890ff;
+          }
+        }
+      }
+    }
+    
+    .ant-tabs-content-holder {
+      .ant-tabs-tabpane {
+        .action-row {
+          margin-bottom: 24px;
+          
+          .ant-space {
+            .ant-btn {
+              height: 40px;
+              padding: 0 20px;
+              border-radius: 6px;
+              font-weight: 500;
+              
+              &.ant-btn-primary {
+                background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+                border: none;
+                box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+                
+                &:hover {
+                  background: linear-gradient(135deg, #40a9ff 0%, #1890ff 100%);
+                  transform: translateY(-1px);
+                  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .system-status-card,
+  .message-record-card {
+    margin-bottom: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
+    .ant-card-head {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-bottom: 1px solid #e8e8e8;
+      border-radius: 8px 8px 0 0;
+      
+      .ant-card-head-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #262626;
+      }
+    }
+    
+    .ant-card-body {
+      padding: 24px;
+    }
+  }
+
+  .ant-table {
+    .ant-table-thead > tr > th {
+      background: #fafafa;
+      border-bottom: 1px solid #e8e8e8;
+      font-weight: 600;
+      color: #262626;
+    }
+    
+    .ant-table-tbody > tr > td {
+      border-bottom: 1px solid #f0f0f0;
+      padding: 16px 12px;
+    }
+    
+    .ant-table-tbody > tr:hover > td {
+      background: #f5f5f5;
+    }
+  }
+
+  .ant-tag {
+    border-radius: 4px;
+    font-weight: 500;
+    padding: 4px 8px;
+    
+    &.ant-tag-green {
+      background: #f6ffed;
+      border-color: #b7eb8f;
+      color: #52c41a;
+    }
+    
+    &.ant-tag-red {
+      background: #fff2f0;
+      border-color: #ffccc7;
+      color: #ff4d4f;
+    }
+    
+    &.ant-tag-orange {
+      background: #fff7e6;
+      border-color: #ffd591;
+      color: #fa8c16;
+    }
+    
+    &.ant-tag-blue {
+      background: #e6f7ff;
+      border-color: #91d5ff;
+      color: #1890ff;
+    }
+  }
+
+  .ant-btn {
+    border-radius: 6px;
+    font-weight: 500;
+    
+    &.ant-btn-sm {
+      height: 28px;
+      padding: 0 12px;
+      font-size: 12px;
+    }
+    
+    &.ant-btn-primary {
+      background: #1890ff;
+      border-color: #1890ff;
+      
+      &:hover {
+        background: #40a9ff;
+        border-color: #40a9ff;
+      }
+    }
+  }
+
+  .ant-modal {
+    .ant-modal-header {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-bottom: 1px solid #e8e8e8;
+      
+      .ant-modal-title {
+        font-weight: 600;
+        color: #262626;
+      }
+    }
+    
+    .ant-modal-body {
+      padding: 24px;
+    }
+    
+    .ant-form-item-label > label {
+      font-weight: 500;
+      color: #262626;
+    }
+    
+    .ant-input,
+    .ant-select-selector,
+    .ant-picker {
+      border-radius: 6px;
+      border: 1px solid #d9d9d9;
+      
+      &:hover {
+        border-color: #40a9ff;
+      }
+      
+      &:focus,
+      &.ant-input-focused,
+      &.ant-select-focused .ant-select-selector,
+      &.ant-picker-focused {
+        border-color: #1890ff;
+        box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+      }
+    }
+    
+    .ant-input-textarea {
+      .ant-input {
+        border-radius: 6px;
+      }
+    }
+  }
+
+  // 响应式设计
+  @media (max-width: 768px) {
+    padding: 16px;
+    
+    .stats-row {
+      .ant-col {
+        margin-bottom: 16px;
+      }
+    }
+    
+    .action-row {
+      .ant-space {
+        flex-direction: column;
+        width: 100%;
+        
+        .ant-btn {
+          width: 100%;
+          margin-bottom: 8px;
+        }
+      }
+    }
+    
+    .page-header {
+      h1 {
+        font-size: 24px;
+      }
+      
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  // 动画效果
+  .ant-card,
+  .ant-table,
+  .ant-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  // 加载状态样式
+  .ant-spin {
+    .ant-spin-dot {
+      i {
+        background-color: #1890ff;
+      }
+    }
+  }
+
+  // 消息提示样式
+  .ant-message {
+    .ant-message-notice {
+      .ant-message-notice-content {
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}

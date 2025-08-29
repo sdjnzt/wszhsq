@@ -24,6 +24,9 @@ import {
   VideoCameraOutlined,
   LogoutOutlined,
   SettingOutlined,
+  WechatOutlined,
+  ApiOutlined,
+  LinkOutlined,
 } from '@ant-design/icons';
 import './MainLayout.less';
 
@@ -180,6 +183,21 @@ const MainLayout: React.FC = () => {
       key: '/event',
       icon: <AlertOutlined />,
       label: <Link to="event">事件管理</Link>,
+    },
+    {
+      key: '/wechat',
+      icon: <WechatOutlined />,
+      label: <Link to="wechat">微信企业端</Link>,
+    },
+    {
+      key: '/interface',
+      icon: <LinkOutlined />,
+      label: <Link to="interface">接口对接管理</Link>,
+    },
+    {
+      key: '/government',
+      icon: <ApiOutlined />,
+      label: <Link to="government">政务系统对接</Link>,
     },
   ];
 

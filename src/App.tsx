@@ -24,6 +24,9 @@ import PartyHousehold from './pages/party/PartyHousehold';
 import PartyOrganization from './pages/party/PartyOrganization';
 import VideoSurveillance from './pages/VideoSurveillance';
 import VehicleManagement from './pages/VehicleManagement';
+import WeChatEnterprise from './pages/WeChatEnterprise';
+import GovernmentSystem from './pages/GovernmentSystem';
+import InterfaceIntegration from './pages/InterfaceIntegration';
 import './App.css';
 
 const App: React.FC = () => {
@@ -46,6 +49,9 @@ const App: React.FC = () => {
           <Route path="grid" element={<GridManagement />} />
           <Route path="video" element={<VideoSurveillance />} />
           <Route path="vehicle" element={<VehicleManagement />} />
+          <Route path="wechat" element={<WeChatEnterprise />} />
+          <Route path="government" element={<GovernmentSystem />} />
+          <Route path="interface" element={<InterfaceIntegration />} />
           <Route path="elderly">
             <Route path="info" element={<ElderlyInfo />} />
             <Route path="health" element={<ElderlyHealth />} />
