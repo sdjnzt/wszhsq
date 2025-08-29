@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card, Row, Col, Statistic, Button, message, Table, Tag, Space, Modal, Form, Input, Select, DatePicker, Tabs } from 'antd';
 import { 
   WechatOutlined, 
@@ -152,7 +152,7 @@ const WeChatEnterprise: React.FC = () => {
     {
       title: '操作',
       key: 'action',
-      render: (_: any, record: SystemStatus) => (
+      render: (_: unknown, record: SystemStatus) => (
         <Space size="middle">
           <Button 
             type="primary" 
@@ -223,7 +223,7 @@ const WeChatEnterprise: React.FC = () => {
     {
       title: '操作',
       key: 'action',
-      render: (_: any, record: MessageRecord) => (
+      render: (_: unknown, record: MessageRecord) => (
         <Space size="middle">
           {record.status === 'failed' && (
             <Button 
@@ -265,13 +265,13 @@ const WeChatEnterprise: React.FC = () => {
   };
 
   // 重新发送消息
-  const handleResendMessage = (message: MessageRecord) => {
+  const handleResendMessage = (messageRecord: MessageRecord) => {
     message.loading('正在重新发送...', 1);
     setTimeout(() => {
       message.success('消息重新发送成功');
       // 更新消息状态
       setMessageRecords(prev => prev.map(item => 
-        item.id === message.id 
+        item.id === messageRecord.id 
           ? { ...item, status: 'sent' }
           : item
       ));
@@ -305,20 +305,20 @@ const WeChatEnterprise: React.FC = () => {
   };
 
   // 执行批量同步
-  const onSyncSubmit = async (values: any) => {
+  const onSyncSubmit = async () => {
     try {
       message.loading('正在执行批量同步...', 2);
       await new Promise(resolve => setTimeout(resolve, 2000));
       message.success('批量同步完成');
       setSyncModalVisible(false);
       syncForm.resetFields();
-    } catch (error) {
+    } catch {
       message.error('同步失败');
     }
   };
 
   // 发送消息
-  const onMessageSubmit = async (values: any) => {
+  const onMessageSubmit = async (values: { type: 'notification' | 'reminder' | 'alert'; content: string; target: string }) => {
     try {
       message.loading('正在发送消息...', 1);
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -336,7 +336,7 @@ const WeChatEnterprise: React.FC = () => {
       message.success('消息发送成功');
       setMessageModalVisible(false);
       messageForm.resetFields();
-    } catch (error) {
+    } catch {
       message.error('发送失败');
     }
   };

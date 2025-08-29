@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   Card, 
   Row, 
@@ -13,26 +13,26 @@ import {
   Modal, 
   Form, 
   Avatar, 
-  Switch, 
-  Tree, 
+  // Switch, 
+  // Tree, 
   Badge,
-  Tooltip,
+  // Tooltip,
   Popconfirm
 } from 'antd';
 import { 
-  UserOutlined, 
+  // UserOutlined, 
   TeamOutlined, 
   SyncOutlined, 
   PlusOutlined, 
   EditOutlined, 
   DeleteOutlined,
-  LockOutlined,
-  UnlockOutlined,
+  // LockOutlined,
+  // UnlockOutlined,
   CheckCircleOutlined,
   ExclamationCircleOutlined,
   ClockCircleOutlined,
-  SearchOutlined,
-  FilterOutlined
+  // SearchOutlined,
+  // FilterOutlined
 } from '@ant-design/icons';
 import './WeChatUserManagement.less';
 
@@ -179,7 +179,7 @@ const WeChatUserManagement: React.FC = () => {
     {
       title: '联系方式',
       key: 'contact',
-      render: (_: any, record: WeChatUser) => (
+      render: (_: unknown, record: WeChatUser) => (
         <div>
           <div style={{ marginBottom: 4 }}>{record.mobile}</div>
           <div style={{ fontSize: '12px', color: '#666' }}>{record.email}</div>
@@ -231,7 +231,7 @@ const WeChatUserManagement: React.FC = () => {
     {
       title: '权限',
       key: 'permissions',
-      render: (_: any, record: WeChatUser) => (
+      render: (_: unknown, record: WeChatUser) => (
         <Space size={4}>
           {record.permissions.map(perm => (
             <Tag key={perm} color={perm === 'admin' ? 'red' : perm === 'write' ? 'blue' : 'green'}>
@@ -249,7 +249,7 @@ const WeChatUserManagement: React.FC = () => {
     {
       title: '操作',
       key: 'action',
-      render: (_: any, record: WeChatUser) => (
+      render: (_: unknown, record: WeChatUser) => (
         <Space size="middle">
           <Button 
             type="primary" 
@@ -306,7 +306,7 @@ const WeChatUserManagement: React.FC = () => {
     {
       title: '用户数量',
       key: 'userCount',
-      render: (_: any, record: Department) => {
+      render: (_: unknown, record: Department) => {
         const count = users.filter(u => u.department === record.name).length;
         return <Badge count={count} showZero style={{ backgroundColor: count > 0 ? '#52c41a' : '#d9d9d9' }} />;
       }
@@ -314,7 +314,7 @@ const WeChatUserManagement: React.FC = () => {
     {
       title: '操作',
       key: 'action',
-      render: (_: any, record: Department) => (
+      render: (_: unknown, record: Department) => (
         <Space size="middle">
           <Button 
             size="small" 
@@ -397,7 +397,7 @@ const WeChatUserManagement: React.FC = () => {
   };
 
   // 保存用户
-  const onUserSubmit = async (values: any) => {
+  const onUserSubmit = async (values: Omit<WeChatUser, 'id' | 'syncStatus' | 'lastSync'>) => {
     try {
       message.loading('正在保存用户...', 1);
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -422,13 +422,13 @@ const WeChatUserManagement: React.FC = () => {
       setUserModalVisible(false);
       userForm.resetFields();
       setSelectedUser(null);
-    } catch (error) {
+    } catch {
       message.error('保存失败');
     }
   };
 
   // 保存部门
-  const onDeptSubmit = async (values: any) => {
+  const onDeptSubmit = async (values: Omit<Department, 'id' | 'level'>) => {
     try {
       message.loading('正在保存部门...', 1);
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -452,7 +452,7 @@ const WeChatUserManagement: React.FC = () => {
       setDeptModalVisible(false);
       deptForm.resetFields();
       setSelectedDept(null);
-    } catch (error) {
+    } catch {
       message.error('保存失败');
     }
   };

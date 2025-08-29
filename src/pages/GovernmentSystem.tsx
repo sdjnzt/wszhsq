@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { 
   Card, 
   Row, 
@@ -14,11 +14,10 @@ import {
   message, 
   Modal, 
   Descriptions, 
-  Timeline, 
+
   Progress, 
   Alert,
   Tabs,
-  Divider,
   Typography
 } from 'antd';
 import { 
@@ -27,11 +26,8 @@ import {
   CheckCircleOutlined, 
   ExclamationCircleOutlined, 
   SettingOutlined,
-  DatabaseOutlined,
-  SafetyCertificateOutlined,
   MonitorOutlined,
-  HistoryOutlined,
-  FileTextOutlined
+  HistoryOutlined
 } from '@ant-design/icons';
 import './GovernmentSystem.less';
 
@@ -256,7 +252,7 @@ const GovernmentSystem: React.FC = () => {
     {
       title: '操作',
       key: 'action',
-      render: (_: any, record: ApiConfig) => (
+      render: (_: unknown, record: ApiConfig) => (
         <Space size="middle">
           <Button 
             type="primary" 
@@ -336,7 +332,7 @@ const GovernmentSystem: React.FC = () => {
     {
       title: '操作',
       key: 'action',
-      render: (_: any, record: SyncRecord) => (
+      render: (_: unknown, record: SyncRecord) => (
         <Space size="middle">
           {record.status === 'failed' && (
             <Button 
@@ -460,7 +456,7 @@ const GovernmentSystem: React.FC = () => {
   };
 
   // 执行API测试
-  const onTestSubmit = async (values: any) => {
+  const onTestSubmit = async (values: { apiName: string; url: string; method: string; testParams?: string }) => {
     try {
       message.loading('正在测试接口...', 2);
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -479,13 +475,13 @@ const GovernmentSystem: React.FC = () => {
       message.success('接口测试完成');
       setTestModalVisible(false);
       testForm.resetFields();
-    } catch (error) {
+    } catch {
       message.error('测试失败');
     }
   };
 
   // 保存API配置
-  const onConfigSubmit = async (values: any) => {
+  const onConfigSubmit = async (values: Partial<ApiConfig>) => {
     try {
       message.loading('正在保存配置...', 1);
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -501,7 +497,7 @@ const GovernmentSystem: React.FC = () => {
       message.success('配置保存成功');
       setConfigModalVisible(false);
       configForm.resetFields();
-    } catch (error) {
+    } catch {
       message.error('保存失败');
     }
   };
