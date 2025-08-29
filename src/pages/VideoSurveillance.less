@@ -1,0 +1,468 @@
+.video-surveillance-container {
+  width: 100%;
+
+  .search-container {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .matrix-settings {
+    background: #f8f9fa;
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e8;
+  }
+
+  .camera-tabs {
+    margin-top: 16px;
+  }
+
+  // 旋转动画
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  // 矩阵容器样式
+  .matrix-container {
+    width: 100%;
+    height: 600px;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #333;
+    
+    .matrix-grid {
+      display: grid;
+      width: 100%;
+      height: 100%;
+      gap: 2px;
+      background: #333;
+      
+      .matrix-cell {
+        background: #000;
+        position: relative;
+        overflow: hidden;
+        
+        .matrix-card {
+          height: 100%;
+          border: none;
+          border-radius: 0;
+          
+          .ant-card-head {
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid #333;
+            padding: 8px 12px;
+            min-height: 40px;
+            
+            .ant-card-head-title {
+              color: #fff;
+              font-size: 12px;
+              line-height: 1.2;
+            }
+          }
+          
+          .ant-card-body {
+            padding: 4px;
+            height: calc(100% - 40px);
+            display: flex;
+            flex-direction: column;
+          }
+          
+          .video-container {
+            flex: 1;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-bottom: 4px;
+            
+            .camera-video {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+            
+            .video-offline {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              color: #ff4d4f;
+              height: 100%;
+              width: 100%;
+              
+              .anticon {
+                font-size: 24px;
+                margin-bottom: 4px;
+              }
+              
+              p {
+                font-size: 10px;
+                margin: 0;
+                text-align: center;
+              }
+            }
+
+            // 视频加载状态样式
+            .video-loading {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              color: #1890ff;
+              height: 100%;
+              width: 100%;
+              
+              .loading-spinner {
+                width: 32px;
+                height: 32px;
+                border: 3px solid #f3f3f3;
+                border-top: 3px solid #1890ff;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                margin-bottom: 8px;
+              }
+              
+              p {
+                font-size: 12px;
+                margin: 0;
+                text-align: center;
+                color: #666;
+              }
+            }
+
+            // 视频错误状态样式
+            .video-error {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              color: #ff4d4f;
+              height: 100%;
+              width: 100%;
+              padding: 16px;
+              text-align: center;
+              
+              .anticon {
+                font-size: 24px;
+                margin-bottom: 8px;
+                color: #ff4d4f;
+              }
+              
+              p {
+                font-size: 12px;
+                margin: 0 0 12px 0;
+                text-align: center;
+                color: #666;
+              }
+              
+              .ant-btn {
+                font-size: 10px;
+                height: 24px;
+                padding: 0 8px;
+              }
+            }
+            
+            // 状态指示器
+            .status-indicators {
+              position: absolute;
+              top: 4px;
+              right: 4px;
+              display: flex;
+              flex-direction: column;
+              gap: 2px;
+              
+              .ant-badge {
+                .ant-badge-status-dot {
+                  width: 6px;
+                  height: 6px;
+                }
+                
+                .ant-badge-status-text {
+                  font-size: 8px;
+                  color: #fff;
+                  background: rgba(0, 0, 0, 0.7);
+                  padding: 1px 4px;
+                  border-radius: 2px;
+                }
+              }
+              
+              .anticon {
+                color: #fff;
+                font-size: 12px;
+                background: rgba(0, 0, 0, 0.7);
+                padding: 2px;
+                border-radius: 2px;
+              }
+            }
+          }
+          
+          .camera-info {
+            p {
+              margin: 0 0 2px 0;
+              font-size: 10px;
+              color: #ccc;
+              line-height: 1.2;
+            }
+          }
+        }
+        
+        .empty-cell {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: #666;
+          background: #1a1a1a;
+          
+          .anticon {
+            font-size: 32px;
+            margin-bottom: 8px;
+          }
+          
+          p {
+            margin: 0;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .camera-card {
+    margin-bottom: 16px;
+    
+    .camera-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .video-container {
+      height: 180px;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 8px;
+      position: relative;
+      
+      .camera-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .video-offline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #ff4d4f;
+        height: 100%;
+        width: 100%;
+        
+        .anticon {
+          font-size: 32px;
+          margin-bottom: 8px;
+        }
+      }
+      
+      // 状态指示器
+      .status-indicators {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        display: flex;
+        gap: 4px;
+        
+        .ant-badge {
+          .ant-badge-status-dot {
+            width: 8px;
+            height: 8px;
+          }
+          
+          .ant-badge-status-text {
+            font-size: 10px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 2px 6px;
+            border-radius: 3px;
+          }
+        }
+        
+        .anticon {
+          color: #fff;
+          font-size: 14px;
+          background: rgba(0, 0, 0, 0.7);
+          padding: 3px;
+          border-radius: 3px;
+        }
+      }
+    }
+    
+    .camera-info {
+      p {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  .live-monitor {
+    .camera-card {
+      .video-container {
+        height: 150px;
+      }
+      
+      .camera-info {
+        p {
+          font-size: 12px;
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+
+  .modal-video-container {
+    height: 400px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+    
+    .modal-video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    
+    .modal-offline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #ff4d4f;
+      height: 100%;
+      width: 100%;
+      
+      .anticon {
+        font-size: 48px;
+        margin-bottom: 16px;
+      }
+      
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .camera-details {
+    padding: 16px 0;
+  }
+
+  .fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    
+    .fullscreen-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      
+      .fullscreen-title {
+        h2 {
+          margin: 0;
+          color: #fff;
+        }
+        
+        p {
+          margin: 4px 0 0;
+          color: #ccc;
+        }
+      }
+    }
+    
+    .fullscreen-video-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      .fullscreen-video {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+      
+      .fullscreen-offline {
+        .anticon {
+          font-size: 64px;
+          margin-bottom: 24px;
+        }
+        
+        p {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  
+  // 响应式设计
+  @media (max-width: 768px) {
+    .matrix-container {
+      height: 400px;
+      
+      .matrix-grid {
+        .matrix-cell {
+          .matrix-card {
+            .ant-card-head {
+              .ant-card-head-title {
+                font-size: 10px;
+              }
+            }
+            
+            .camera-info {
+              p {
+                font-size: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    .search-container {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 8px;
+      
+      .ant-btn {
+        margin-left: 0 !important;
+      }
+    }
+    
+    .matrix-settings {
+      .ant-row {
+        .ant-col {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+} 

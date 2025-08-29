@@ -1,0 +1,129 @@
+.elderly-health-container {
+  .elderly-health-card {
+    margin-bottom: 16px;
+    
+    .ant-card-head {
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #e8e8e8;
+      
+      .ant-card-head-title {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+  
+  .search-container {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .ant-table {
+    .ant-table-thead > tr > th {
+      background-color: #f5f7fa;
+      font-weight: 500;
+    }
+    
+    .ant-table-row:hover {
+      td {
+        background-color: #e6f7ff;
+      }
+    }
+  }
+  
+  .ant-tag {
+    border-radius: 2px;
+    font-weight: 500;
+    padding: 0 6px;
+    
+    &.ant-tag-green {
+      background-color: #f6ffed;
+      border-color: #b7eb8f;
+      color: #52c41a;
+    }
+    
+    &.ant-tag-orange {
+      background-color: #fff7e6;
+      border-color: #ffd591;
+      color: #fa8c16;
+    }
+    
+    &.ant-tag-red {
+      background-color: #fff1f0;
+      border-color: #ffa39e;
+      color: #f5222d;
+    }
+    
+    &.ant-tag-blue {
+      background-color: #e6f7ff;
+      border-color: #91d5ff;
+      color: #1890ff;
+    }
+  }
+  
+  .ant-btn-text {
+    padding: 0 4px;
+    
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+  }
+  
+  .health-record-detail {
+    .ant-descriptions {
+      margin-bottom: 20px;
+    }
+    
+    .diagnosis-section {
+      padding: 16px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+      
+      h5 {
+        margin-top: 16px;
+        margin-bottom: 8px;
+        font-weight: 500;
+        
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      
+      .ant-typography {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  
+  // 打印样式
+  @media print {
+    .ant-card-head,
+    .search-container,
+    .ant-pagination,
+    .ant-modal-header,
+    .ant-modal-footer,
+    .ant-tabs-nav {
+      display: none !important;
+    }
+    
+    .ant-card,
+    .ant-modal-content,
+    .ant-modal-body {
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    
+    .ant-table-thead > tr > th {
+      background-color: #f0f0f0 !important;
+      -webkit-print-color-adjust: exact;
+    }
+    
+    .ant-descriptions-bordered .ant-descriptions-item-label,
+    .ant-descriptions-bordered .ant-descriptions-item-content {
+      border: 1px solid #d9d9d9 !important;
+    }
+  }
+} 

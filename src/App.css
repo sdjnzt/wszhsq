@@ -1,0 +1,103 @@
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.app-container {
+  width: 100%;
+  height: 100%;
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-layout-header {
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  z-index: 10;
+}
+
+.ant-layout-content {
+  transition: all 0.2s;
+}
+
+.ant-card {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ant-card-body {
+  padding: 14px;
+}
+
+.ant-statistic-title {
+  font-size: 13px;
+}
+
+.ant-card-head {
+  min-height: 40px;
+}
+
+.ant-card-head-title {
+  padding: 10px 0;
+}
+
+.ant-table-thead > tr > th {
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.ant-btn {
+  font-size: 13px;
+  height: 30px;
+  padding: 0 12px;
+}
+
+.ant-form-item {
+  margin-bottom: 16px;
+}
+
+.ant-form-item-label > label {
+  font-size: 13px;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
