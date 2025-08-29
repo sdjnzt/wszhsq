@@ -67,11 +67,11 @@ const MainLayout: React.FC = () => {
   ];
 
   const menuItems = [
-    {
-      key: '/',
-      icon: <HomeOutlined />,
-      label: <Link to="/">首页</Link>,
-    },
+    // {
+    //   key: '/',
+    //   icon: <HomeOutlined />,
+    //   label: <Link to="/">首页</Link>,
+    // },
     {
       key: '/grid',
       icon: <AppstoreOutlined />,
