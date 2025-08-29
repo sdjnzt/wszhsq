@@ -126,7 +126,7 @@ const VideoSurveillancePage: React.FC = () => {
     // 测试视频文件是否可访问
     const testVideo = document.createElement('video');
     testVideo.onloadeddata = () => console.log('✅ 视频文件可访问');
-    testVideo.onerror = () => console.error('❌ 视频文件无法访问，请检查路径: /img/1.mp4');
+    testVideo.onerror = () => console.error('❌ 视频文件无法访问，请检查路径: /wszhsq/img/1.mp4');
     testVideo.onloadstart = () => console.log('🔄 开始加载视频文件');
     testVideo.oncanplay = () => console.log('✅ 视频可以播放');
     testVideo.onwaiting = () => console.log('⏳ 视频缓冲中...');
@@ -134,11 +134,11 @@ const VideoSurveillancePage: React.FC = () => {
     
     // 添加更多调试信息
     console.log('📍 当前页面URL:', window.location.href);
-    console.log('📁 视频文件路径:', '/img/1.mp4');
-    console.log('🔗 完整视频URL:', new URL('/img/1.mp4', window.location.href).href);
+    console.log('📁 视频文件路径:', '/wszhsq/img/1.mp4');
+    console.log('🔗 完整视频URL:', new URL('/wszhsq/img/1.mp4', window.location.href).href);
     
     // 检查视频文件是否存在
-    fetch('/img/1.mp4', { method: 'HEAD' })
+    fetch('/wszhsq/img/1.mp4', { method: 'HEAD' })
       .then(response => {
         if (response.ok) {
           console.log('✅ 视频文件存在，状态码:', response.status);
@@ -150,7 +150,7 @@ const VideoSurveillancePage: React.FC = () => {
         console.error('❌ 无法访问视频文件:', error);
       });
     
-    testVideo.src = '/img/1.mp4';
+    testVideo.src = 'https://sdjnzt.github.io/wszhsq/img/11.mp4';
     
     // 模拟API调用
     setTimeout(() => {
@@ -175,7 +175,7 @@ const VideoSurveillancePage: React.FC = () => {
             building,
             floor: `${index % 10 + 1}层`,
             responsible: `管理员${index % 5 + 1}`,
-            videoUrl: '/img/1.mp4',
+            videoUrl: 'https://sdjnzt.github.io/wszhsq/img/11.mp4',
             resolution: index % 3 === 0 ? '4K' : index % 2 === 0 ? '1080P' : '720P',
             fps: index % 2 === 0 ? 30 : 25,
             bitrate: 2000 + (index % 1000),
@@ -259,7 +259,7 @@ const VideoSurveillancePage: React.FC = () => {
         const newCamera = {
           ...values,
           id: `cam-${cameras.length + 1}`,
-          videoUrl: '/img/1.mp4',
+                      videoUrl: 'https://sdjnzt.github.io/wszhsq/img/11.mp4',
           status: 'online' as const,
         };
         setCameras([...cameras, newCamera]);
@@ -701,7 +701,7 @@ const VideoSurveillancePage: React.FC = () => {
            <h4>测试视频播放功能</h4>
            <p>如果下面的视频能正常播放，说明视频文件路径正确</p>
                        <video 
-              src="/img/1.mp4" 
+              src="/wszhsq/img/1.mp4" 
               controls={false}
               autoPlay={true}
               muted={true}
